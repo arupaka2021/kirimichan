@@ -1,0 +1,331 @@
+
+<!doctype html>
+<html lang="ja">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-57QTQDL');</script>
+<!-- End Google Tag Manager -->
+<meta charset="utf-8">
+<title>KIRIMIちゃん. | ゲーム | サンリオ</title>
+<meta name="description" content="KIRIMIちゃん.でおべんとうをつくろう！">
+<meta name="keywords" content="サンリオ,sarnio,エンターテイメント,ゲーム,KIRIMIちゃん,きりみちゃん">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="サンリオ | KIRIMIちゃん.ゲーム">
+<meta property="og:description" content="KIRIMIちゃん.でおべんとうをつくろう！">
+<meta property="og:url" content="https://www.sanrio.co.jp/special/kirimichan/obento/">
+<meta property="og:image" content="https://www.sanrio.co.jp/special/kirimichan/obento/sns.jpg">
+
+<link rel="stylesheet" type="text/css" href="css/normalize.css">
+<link rel="stylesheet" type="text/css" href="css/common.css">
+<link rel="stylesheet" type="text/css" href="css/module.css">
+<link rel="stylesheet" href="/special/gigya/gigya-plugin.css" type="text/css" media="all">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/loading.js"></script>
+<!-- canvas post -->
+<!-- <script type="text/javascript" src="js/bin/canvas2image.js"></script> -->
+<script type="text/javascript" src="bin/base64.js"></script>
+<script type="text/javascript" src="bin/html2canvas.js"></script>
+<script type="text/javascript">
+    // $(document).ready(function () {
+    //     // $.ajaxSetup({
+    //     //     cache: true
+    //     // });
+    //     $.getScript('//connect.facebook.net/en_UK/all.js', function () {
+    //         // Load the APP / SDK
+    //         FB.init({
+    //             appId: '302731929913387', // App ID from the App Dashboard
+    //             cookie: true, // set sessions cookies to allow your server to access the session?
+    //             xfbml: true, // parse XFBML tags on this page?
+    //             frictionlessRequests: true,
+    //             oauth: true,
+    //             version    : 'v2.2'
+    //         });
+    //         // FB.login(function (response) {
+    //         //     if (response.authResponse) {
+    //         //         window.authToken = response.authResponse.accessToken;
+    //         //     } else {
+    //         //     }
+    //         // }, {
+    //         //     scope: 'publish_actions,publish_stream'
+    //         // });
+    //     });
+    // });
+</script>
+<script type="text/javascript">
+ 	var Base64Binary = {
+    _keyStr : "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=",
+    
+    /* will return a  Uint8Array type */
+    decodeArrayBuffer: function(input) {
+      var bytes = (input.length/4) * 3;
+      var ab = new ArrayBuffer(bytes);
+      this.decode(input, ab);
+      
+      return ab;
+    },
+    
+    decode: function(input, arrayBuffer) {
+      //get last chars to see if are valid
+      var lkey1 = this._keyStr.indexOf(input.charAt(input.length-1));    
+      var lkey2 = this._keyStr.indexOf(input.charAt(input.length-2));    
+    
+      var bytes = (input.length/4) * 3;
+      if (lkey1 == 64) bytes--; //padding chars, so skip
+      if (lkey2 == 64) bytes--; //padding chars, so skip
+      
+      var uarray;
+      var chr1, chr2, chr3;
+      var enc1, enc2, enc3, enc4;
+      var i = 0;
+      var j = 0;
+      
+      if (arrayBuffer)
+        uarray = new Uint8Array(arrayBuffer);
+      else
+        uarray = new Uint8Array(bytes);
+      
+      input = input.replace(/[^A-Za-z0-9\+\/\=]/g, "");
+      
+      for (i=0; i<bytes; i+=3) {  
+        //get the 3 octects in 4 ascii chars
+        enc1 = this._keyStr.indexOf(input.charAt(j++));
+        enc2 = this._keyStr.indexOf(input.charAt(j++));
+        enc3 = this._keyStr.indexOf(input.charAt(j++));
+        enc4 = this._keyStr.indexOf(input.charAt(j++));
+    
+        chr1 = (enc1 << 2) | (enc2 >> 4);
+        chr2 = ((enc2 & 15) << 4) | (enc3 >> 2);
+        chr3 = ((enc3 & 3) << 6) | enc4;
+    
+        uarray[i] = chr1;     
+        if (enc3 != 64) uarray[i+1] = chr2;
+        if (enc4 != 64) uarray[i+2] = chr3;
+      }
+    
+      return uarray;  
+    }
+  }
+</script>
+<script type="text/javascript" src="/special/gigya/gigya-plugin.js"></script>
+
+</head>
+
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-57QTQDL" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-X4TK" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script src="/common_v2/js/ga.js"></script>
+<!-- End Google Tag Manager -->
+
+<div id='fb-root'></div>
+<div id="loader"><img src="images/common/loading.gif" width="32" height="32" alt="Loading..." /></div>
+<div id="fade"></div>
+<div id="overlayer"></div>
+<!--=============== お弁当選択画面 ===============-->
+<div id="kirimiObentoSelect" class="container">
+	<header>
+		<h1><img src="images/layout/head_ttl.png" width="642" height="80" alt="KIRIMIちゃん. de Obento"></h1>
+	</header>
+	<section id="contents">
+		<div class="modTxtArea01">
+			<p><img src="images/layout/txt_top01.png" width="360" height="39" alt="お弁当をえらんでね"></p>
+		</div>
+		<div class="modObentoSelectBox">
+			<ul class="clearfix">
+				<li><img src="images/item/item_thum_bento1.png" width="252" height="180" alt=""></li>
+				<li><img src="images/item/item_thum_bento2.png" width="252" height="180" alt=""></li>
+				<li><img src="images/item/item_thum_bento3.png" width="252" height="180" alt=""></li>
+				<li><img src="images/item/item_thum_bento4.png" width="252" height="180" alt=""></li>
+				<li><img src="images/item/item_thum_bento5.png" width="252" height="180" alt=""></li>
+				<li><img src="images/item/item_thum_bento6.png" width="252" height="180" alt=""></li>
+			</ul>
+		</div>
+		<div class="btnArea"><img src="images/layout/btn_select_noact.png" width="310" height="78" alt="これできまり！"></div>
+	</section>
+</div>
+<!--=============== /お弁当選択画面 ===============-->
+
+<!--=============== ごはん、おかず選択、結果画面 ===============-->
+<div id="kirimiOtherSelect" class="container">
+	<header>
+		<h1><img src="images/layout/head_ttl.png" width="642" height="80" alt="KIRIMIちゃん. de Obento"></h1>
+	</header>
+	<section id="contents">
+		<!-- お弁当レイアウトエリア -->
+		<div class="modLayoutBox">
+			<div id="obentoBackBoxArea"></div>
+			<div id="riceArea"></div>
+			<div id="okazuSublArea">
+				<span class="layoutImgBox"></span>
+			</div>
+			<div id="okazuMainArea">
+				<span class="layoutImgBox"></span>
+			</div>
+			<div id="baranArea"><img src="images/item/baran.png" width="162" height="75" alt=""></div>
+			<div id="okazuSubslArea">
+				<span class="layoutImgBox"></span>
+			</div>
+			<div id="okazuSubsrArea">
+				<span class="layoutImgBox"></span>
+			</div>
+			<div id="okazuSubflArea">
+				<span class="layoutImgBox"></span>
+			</div>
+			<div id="okazuSubfrArea">
+				<span class="layoutImgBox"></span>
+			</div>
+			<div id="obentoFrontBoxArea"><img src="images/item/item_bento1_f.png" width="600" height="450" alt=""></div>
+			<div id="okazuSublAreaOl"><img src="images/item/item_okazu_subl_ol.png" width="152" height="140" alt=""></div>
+			<div id="okazuMainAreaOl"><img src="images/item/item_okazu_main_ol.png" width="337" height="140" alt=""></div>
+			<div id="okazuSubslAreaOl"><img src="images/item/item_okazu_subs_ol.png" width="116" height="130" alt=""></div>
+			<div id="okazuSubsrAreaOl"><img src="images/item/item_okazu_subs_ol.png" width="116" height="130" alt=""></div>
+			<div id="okazuSubflAreaOl"><img src="images/item/item_okazu_subf_ol.png" width="128" height="130" alt=""></div>
+			<div id="okazuSubfrAreaOl"><img src="images/item/item_okazu_subf_ol.png" width="128" height="130" alt=""></div>
+		</div>
+		<!-- /お弁当レイアウトエリア -->
+		<!-- 右エリア -->
+		<div class="rightArea">
+			<div class="modTxtArea02">
+				<p id="txtRice"><img src="images/layout/txt_top02.png" width="322" height="36" alt="ごはんをえらんでね"></p>
+				<p id="txtOkazuMain"><img src="images/layout/txt_top03.png" width="322" height="36" alt="おかずをえらんでね"></p>
+			</div>
+			<!-- ご飯選択 -->
+			<div class="selectArea" id="riceSlide">
+				<ul>
+					<li data-type="shiro" data-imgurl="item_rice_1"><img src="images/item/item_thum_rice_1.png" width="155" height="88" alt=""><span>白ご飯</span></li>
+					<li data-type="shirodai" data-imgurl="item_rice_2"><img src="images/item/item_thum_rice_2.png" width="155" height="88" alt=""><span>白ご飯大盛り</span></li>
+					<li data-type="ketchup" data-imgurl="item_rice_3"><img src="images/item/item_thum_rice_3.png" width="155" height="88" alt=""><span>ケチャップご飯</span></li>
+					<li data-type="saffron" data-imgurl="item_rice_4"><img src="images/item/item_thum_rice_4.png" width="155" height="88" alt=""><span>サフランライス</span></li>
+					<li data-type="sekihan" data-imgurl="item_rice_5"><img src="images/item/item_thum_rice_5.png" width="155" height="88" alt=""><span>赤飯</span></li>
+					<li data-type="gomoku" data-imgurl="item_rice_6"><img src="images/item/item_thum_rice_6.png" width="155" height="88" alt=""><span>五目ご飯</span></li>
+					<li data-type="greenpea" data-imgurl="item_rice_7"><img src="images/item/item_thum_rice_7.png" width="155" height="88" alt=""><span>グリンピースご飯</span></li>
+					<li data-type="sumeshi" data-imgurl="item_rice_8"><img src="images/item/item_thum_rice_8.png" width="155" height="88" alt=""><span>酢飯</span></li>
+				</ul>
+			</div>
+			<!-- /ご飯選択 -->
+			<!-- おかずメイン選択 -->
+			<div class="selectArea" id="okazuMainSlide">
+				<ul>
+					<li data-type="kirimi" data-imgurl="item_okazu_main1"><img src="images/item/item_thum_okazu_main1.png" width="155" height="88" alt=""></li>
+					<li data-type="buri" data-imgurl="item_okazu_main2"><img src="images/item/item_thum_okazu_main2.png" width="155" height="88" alt=""></li>
+					<li data-type="saba" data-imgurl="item_okazu_main3"><img src="images/item/item_thum_okazu_main3.png" width="155" height="88" alt=""></li>
+					<li data-type="rose" data-imgurl="item_okazu_main4"><img src="images/item/item_thum_okazu_main4.png" width="155" height="88" alt=""></li>
+					<li data-type="tai" data-imgurl="item_okazu_main5"><img src="images/item/item_thum_okazu_main5.png" width="155" height="88" alt=""></li>
+					<li data-type="gintara" data-imgurl="item_okazu_main6"><img src="images/item/item_thum_okazu_main6.png" width="155" height="88" alt=""></li>
+					<li data-type="sawara" data-imgurl="item_okazu_main7"><img src="images/item/item_thum_okazu_main7.png" width="155" height="88" alt=""></li>
+					<li data-type="same" data-imgurl="item_okazu_main8"><img src="images/item/item_thum_okazu_main8.png" width="155" height="88" alt=""></li>
+				</ul>
+			</div>
+			<!-- /おかずメイン選択 -->
+			<!-- おかずサブ、メインとなり選択 -->
+			<div class="selectArea" id="okazuSub1Slide">
+				<ul>
+					<li data-type="sub1_1" data-imgurl="item_okazu_subl_1"><img src="images/item/item_thum_okazu_subl_1.png" width="104" height="117" alt=""></li>
+					<li data-type="sub1_2" data-imgurl="item_okazu_subl_2"><img src="images/item/item_thum_okazu_subl_2.png" width="104" height="117" alt=""></li>
+					<li data-type="sub1_3" data-imgurl="item_okazu_subl_3"><img src="images/item/item_thum_okazu_subl_3.png" width="104" height="117" alt=""></li>
+					<li data-type="sub1_4" data-imgurl="item_okazu_subl_4"><img src="images/item/item_thum_okazu_subl_4.png" width="104" height="117" alt=""></li>
+					<li data-type="sub1_5" data-imgurl="item_okazu_subl_5"><img src="images/item/item_thum_okazu_subl_5.png" width="104" height="117" alt=""></li>
+					<li data-type="sub1_6" data-imgurl="item_okazu_subl_6"><img src="images/item/item_thum_okazu_subl_6.png" width="104" height="117" alt=""></li>
+					<li data-type="sub1_7" data-imgurl="item_okazu_subl_7"><img src="images/item/item_thum_okazu_subl_7.png" width="104" height="117" alt=""></li>
+					<li data-type="sub1_8" data-imgurl="item_okazu_subl_8"><img src="images/item/item_thum_okazu_subl_8.png" width="104" height="117" alt=""></li>
+					<li data-type="sub1_9" data-imgurl="item_okazu_subl_9"><img src="images/item/item_thum_okazu_subl_9.png" width="104" height="117" alt=""></li>
+				</ul>
+			</div>
+			<!-- /おかずサブ、メインとなり選択 -->
+			<!-- おかずサブ左奥選択 -->
+			<div class="selectArea" id="okazuSub2Slide">
+				<ul>
+					<li data-type="sub2_1" data-imgurl="item_okazu_subsl_1"><img src="images/item/item_thum_okazu_subsl_1.png" width="104" height="117" alt=""></li>
+					<li data-type="sub2_2" data-imgurl="item_okazu_subsl_2"><img src="images/item/item_thum_okazu_subsl_2.png" width="104" height="117" alt=""></li>
+					<li data-type="sub2_3" data-imgurl="item_okazu_subsl_3"><img src="images/item/item_thum_okazu_subsl_3.png" width="104" height="117" alt=""></li>
+					<li data-type="sub2_4" data-imgurl="item_okazu_subsl_4"><img src="images/item/item_thum_okazu_subsl_4.png" width="104" height="117" alt=""></li>
+					<li data-type="sub2_5" data-imgurl="item_okazu_subsl_5"><img src="images/item/item_thum_okazu_subsl_5.png" width="104" height="117" alt=""></li>
+					<li data-type="sub2_6" data-imgurl="item_okazu_subsl_6"><img src="images/item/item_thum_okazu_subsl_6.png" width="104" height="117" alt=""></li>
+					<li data-type="sub2_7" data-imgurl="item_okazu_subsl_7"><img src="images/item/item_thum_okazu_subsl_7.png" width="104" height="117" alt=""></li>
+					<li data-type="sub2_8" data-imgurl="item_okazu_subsl_8"><img src="images/item/item_thum_okazu_subsl_8.png" width="104" height="117" alt=""></li>
+					<li data-type="sub2_9" data-imgurl="item_okazu_subsl_9"><img src="images/item/item_thum_okazu_subsl_9.png" width="104" height="117" alt=""></li>
+				</ul>
+			</div>
+			<!-- /おかずサブ左奥選択 -->
+			<!-- おかずサブ左手前選択 -->
+			<div class="selectArea" id="okazuSub3Slide">
+				<ul>
+					<li data-type="sub3_1" data-imgurl="item_okazu_subfl_1"><img src="images/item/item_thum_okazu_subfl_1.png" width="156" height="117" alt=""></li>
+					<li data-type="sub3_2" data-imgurl="item_okazu_subfl_2"><img src="images/item/item_thum_okazu_subfl_2.png" width="156" height="117" alt=""></li>
+					<li data-type="sub3_3" data-imgurl="item_okazu_subfl_3"><img src="images/item/item_thum_okazu_subfl_3.png" width="156" height="117" alt=""></li>
+					<li data-type="sub3_4" data-imgurl="item_okazu_subfl_4"><img src="images/item/item_thum_okazu_subfl_4.png" width="156" height="117" alt=""></li>
+					<li data-type="sub3_5" data-imgurl="item_okazu_subfl_5"><img src="images/item/item_thum_okazu_subfl_5.png" width="156" height="117" alt=""></li>
+					<li data-type="sub3_6" data-imgurl="item_okazu_subfl_6"><img src="images/item/item_thum_okazu_subfl_6.png" width="156" height="117" alt=""></li>
+				</ul>
+			</div>
+			<!-- /おかずサブ左手前選択 -->
+			<!-- おかずサブ右手前選択 -->
+			<div class="selectArea" id="okazuSub4Slide">
+				<ul>
+					<li data-type="sub4_4" data-imgurl="item_okazu_subfr_4"><img src="images/item/item_thum_okazu_subfr_4.png" width="156" height="117" alt=""></li>
+					<li data-type="sub4_5" data-imgurl="item_okazu_subfr_5"><img src="images/item/item_thum_okazu_subfr_5.png" width="156" height="117" alt=""></li>
+					<li data-type="sub4_6" data-imgurl="item_okazu_subfr_6"><img src="images/item/item_thum_okazu_subfr_6.png" width="156" height="117" alt=""></li>
+					<li data-type="sub4_1" data-imgurl="item_okazu_subfr_1"><img src="images/item/item_thum_okazu_subfr_1.png" width="156" height="117" alt=""></li>
+					<li data-type="sub4_2" data-imgurl="item_okazu_subfr_2"><img src="images/item/item_thum_okazu_subfr_2.png" width="156" height="117" alt=""></li>
+					<li data-type="sub4_3" data-imgurl="item_okazu_subfr_3"><img src="images/item/item_thum_okazu_subfr_3.png" width="156" height="117" alt=""></li>
+				</ul>
+			</div>
+			<!-- /おかずサブ右手前選択 -->
+			<!-- おかずサブ右奥選択 -->
+			<div class="selectArea" id="okazuSub5Slide">
+				<ul>
+					<li data-type="sub5_1" data-imgurl="item_okazu_subsr_1"><img src="images/item/item_thum_okazu_subsr_1.png" width="104" height="117" alt=""></li>
+					<li data-type="sub5_2" data-imgurl="item_okazu_subsr_2"><img src="images/item/item_thum_okazu_subsr_2.png" width="104" height="117" alt=""></li>
+					<li data-type="sub5_3" data-imgurl="item_okazu_subsr_3"><img src="images/item/item_thum_okazu_subsr_3.png" width="104" height="117" alt=""></li>
+					<li data-type="sub5_4" data-imgurl="item_okazu_subsr_4"><img src="images/item/item_thum_okazu_subsr_4.png" width="104" height="117" alt=""></li>
+					<li data-type="sub5_5" data-imgurl="item_okazu_subsr_5"><img src="images/item/item_thum_okazu_subsr_5.png" width="104" height="117" alt=""></li>
+					<li data-type="sub5_6" data-imgurl="item_okazu_subsr_6"><img src="images/item/item_thum_okazu_subsr_6.png" width="104" height="117" alt=""></li>
+					<li data-type="sub5_7" data-imgurl="item_okazu_subsr_7"><img src="images/item/item_thum_okazu_subsr_7.png" width="104" height="117" alt=""></li>
+					<li data-type="sub5_8" data-imgurl="item_okazu_subsr_8"><img src="images/item/item_thum_okazu_subsr_8.png" width="104" height="117" alt=""></li>
+					<li data-type="sub5_9" data-imgurl="item_okazu_subsr_9"><img src="images/item/item_thum_okazu_subsr_9.png" width="104" height="117" alt=""></li>
+				</ul>
+			</div>
+			<!-- /おかずサブ右奥選択 -->
+			
+			<!-- 決定画面 -->
+			<div class="btnFin"><img src="images/layout/btn_fin.png" width="336" height="84" alt="できた！"></div>
+			<div class="btnAgain"><img src="images/layout/btn_again.png" width="336" height="84" alt="やりなおし"></div>
+			<!-- /決定画面 -->
+			
+			<!-- 結果画面 -->
+			<div class="resultTxtArea">
+				<p id="typeTxt"></p>
+				<p id="kcalTxt"></p>
+			</div>
+			<div class="snsArea clearfix">
+				<p><img src="images/result/txt_share.png" width="141" height="77" alt="シェアしよ→"></p>
+				<div class="btnFb"><a href="#"><img src="images/result/btn_facebook.png" width="77" height="77" alt="Facebook"></a></div>
+				<div class="btnTwitter"><a href="#"><img src="images/result/btn_twitter.png" width="77" height="77" alt="Twitter"></a></div>
+			</div>
+			<div class="btnMakeAgain"><img src="images/result/btn_make_again.png" width="288" height="71" alt="もう一度つくる"></div>
+			<!-- /結果画面 -->
+		</div>
+		<!-- /右エリア -->
+		<div class="btnArea"><img src="images/layout/btn_select_noact.png" width="310" height="78" alt="これできまり！"></div>
+		<div class="backLinkBox"><img src="images/layout/btn_back.png" width="92" height="92" alt="もどる"></div>
+	</section>
+</div>
+<!--=============== /ごはん、おかず選択、結果画面 ===============-->
+<footer>
+	<!--<div class="gg-comments" data-gg-comment-categoryid="www_sanrio_co_jp" data-gg-commentid="special_kirimichan_obento"></div>-->
+	<ul>
+		<li><a href="https://twitter.com/kirimi_sanrio" target="_blank" class="hover"><img src="images/common/btn_twitter.png" width="231" height="64" alt="サンリオトップ"></a></li>
+		<li><a href="https://www.sanrio.co.jp/character/kirimichan/" target="_blank" class="hover"><img src="images/common/btn_kirimi.png" width="231" height="64" alt="KIRIMIちゃん. ページ"></a></li>
+	</ul>
+	<div class="logo"><a href="https://www.sanrio.co.jp/" target="_blank" class="hover"><img src="images/common/logo_sanrio.png" width="132" height="35" alt="Sanrio"></a></div>
+	<div class="copyright"><img src="images/common/copyright.png" width="203" height="30" alt="&copy;2013,2014 SANRIO CO.,LTD."></div>
+</footer>
+
+
+</body>
+</html>

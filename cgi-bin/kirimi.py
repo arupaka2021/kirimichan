@@ -18,7 +18,7 @@ if age >= 18 and age < 30 :
 elif age >= 30 and age < 49 :
     nenrei="30-49"
 
-elif age >= 30 and age < 49 :
+elif age >= 50 and age < 69 :
     nenrei="50-69"
 
 else:

@@ -11,24 +11,24 @@
     <div class="content">
         <h1 style="font-size:300%;">　献立を考えよう</h1>
         <p>　まずは以下の項目に答えてください。</p>
-        <form action="kaimyou.py" method="get">
+        <form action="cgi-bin/kirimi.py" method="get">
 	<div class="control">
 		<label for="age">１．年齢 <span class="required">【必須】</span></label>
 		<input type="number" name="age" required>
 	</div>
         <div class="control">
-            <label for="mymail">２．性別 <span class="required">【必須】</span></label>
-	    <input type="radio" name="mymail" value="1" required>男性
-	    <input type="radio" name="mymail" value="2" required>女性    	    
+            <label for="gender">２．性別 <span class="required">【必須】</span></label>
+	    <input type="radio" name="gender" value="1" required>男性
+	    <input type="radio" name="gender" value="2" required>女性    	    
         </div>
         <div class="control">
-            <label for="passcode">３．活動量<span class="required">　【必須】　</span></label>
-            <input type="radio" name="passcode" value="1" required>善人です。
-            <input type="radio" name="passcode" value="2" required>そこそこです。
-            <input type="radio" name="passcode" value="2" required>そこそこです。
+            <label for="katudou">３．活動量<span class="required">　【必須】　</span></label>
+            <input type="radio" name="katudou" value="1" required>高
+            <input type="radio" name="katudou" value="2" required>中
+            <input type="radio" name="katudou" value="2" required>低
         </div>
         <div class="control">
-        <button type="submit"> 結果を確認する</button>
+        <button type="submit"> 決定</button>
 	</div>
         </form>
     </div>

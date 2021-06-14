@@ -13,12 +13,11 @@ gender = int(form["gender"].value)
 katudou = int(form["katudou"].value)
 
 if age == 20 and gender == 1 :
-    igo="嬰子"
+    cal="2000"
 
 else:
-    igo="信女"
+    cal="3000"
 
-mozi6 = igo
 
 
 print('''
@@ -37,4 +36,4 @@ Content-type: text/html
   <h2>です！</h2>
 </body>
 </html>
-'''[1:-1].format(mozi6))
+'''[1:-1].format(cal))

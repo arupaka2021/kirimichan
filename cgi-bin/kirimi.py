@@ -41,11 +41,24 @@ Content-type: text/html
     </head>
 
 
+
 <body>
 
-<h2>あなたの適正カロリーは</h2>
-<h1><span style="color:blue;">{0}</span></h1>
-<h2>です！</h2>
+<h2>あなたの適正カロリーは<span style="color:blue;">{0}</span>kcalです！</h2>
+<p>適正カロリーを参考に献立を考えましょう。</p>
+
+<h1>主食</h1>
 </body>
+
+<main>
+    <section>
+    <form action="/cgi-bin/kimiri2.py" method="post">
+
+ 
+ 
+    <button class="btn">次へ</button>
+    </form>
+    </section>
+</main>
 </html>
 '''[1:-1].format(cal))

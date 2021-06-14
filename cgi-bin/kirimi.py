@@ -9,16 +9,24 @@ title_str = 'カロリー計算'
 
 form = cgi.FieldStorage()
 age = int(form["age"].value)
-gender = int(form["gender"].value)
-katudou = int(form["katudou"].value)
+gender = form["gender"].value
+katudou = form["katudou"].value
 
-if age =< 18 and age == 1 :
+if age >= 18 and age < 30 :
     nenrei="18-29"
 
+elif age >= 30 and age < 49 :
+    nenrei="30-49"
+
+elif age >= 30 and age < 49 :
+    nenrei="50-69"
+
 else:
-    cal="3000"
+    nenrei="70-120"
 
+import calorie
 
+cal=calorie[gender][nenrei][katudou]
 
 print('''
 Content-type: text/html

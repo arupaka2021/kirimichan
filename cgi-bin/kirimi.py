@@ -39,8 +39,8 @@ Content-type: text/html
     <title>あなたの戒名</title>
   </head>
   <body>
-  <h2>おめでとうございます！戒名の取得に成功しました。</2>
-  <h2>あなたの戒名は</h2>
+
+  <h2>あなたの適正カロリーは</h2>
    <h1><span style="color:blue;">{0}</span></h1>
   <h2>です！</h2>
 </body>

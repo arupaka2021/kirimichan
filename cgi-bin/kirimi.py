@@ -12,8 +12,8 @@ age = int(form["age"].value)
 gender = int(form["gender"].value)
 katudou = int(form["katudou"].value)
 
-if age == 20 and gender == 1 :
-    cal="2000"
+if age =< 18 and age == 1 :
+    nenrei="18-29"
 
 else:
     cal="3000"

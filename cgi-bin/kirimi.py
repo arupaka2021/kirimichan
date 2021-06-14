@@ -40,14 +40,7 @@ Content-type: text/html
         <title>献立を作ろう！</title>
     </head>
 
-<main>
-    <section>
-        <form action="/cgi-bin/kirimi.py" method="post">
-        <!-- ここから以下３行を各Pythonファイルに入れることで次々とデータを渡せます -->
-        <input type="hidden" name="cal" value="{cal}"/>
-        </form>
-    </section>
-</main>
+
 <body>
 
 <h2>あなたの適正カロリーは</h2>

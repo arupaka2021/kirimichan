@@ -28,8 +28,9 @@ else:
     nenrei="70-120"
 
 import calorie
-cal=calorie.calorie[gender][nenrei][katudou]
-
+cal=int(calorie.calorie[gender][nenrei][katudou])
+calo = cal /3
+calorie = round(calo) 
 print('''
 Content-type: text/html
 
@@ -44,7 +45,7 @@ Content-type: text/html
 
 <body>
 
-<h2>あなたの適正カロリーは<span style="color:blue;">{0}</span>kcalです！</h2>
+<h2>あなたの１食当たりの適正カロリーは<span style="color:blue;">{0}</span>です！</h2>
 <p>適正カロリーを参考に献立を考えましょう。</p>
 
 <h1>主食</h1>
@@ -54,11 +55,11 @@ Content-type: text/html
     <section>
     <form action="/cgi-bin/kimiri2.py" method="post">
 
- 
+   
  
     <button class="btn">次へ</button>
     </form>
     </section>
 </main>
 </html>
-'''[1:-1].format(cal))
+'''[1:-1].format(calorie))

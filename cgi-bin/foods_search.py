@@ -44,7 +44,8 @@ Content-type: text/html
 </head>
 
 <body>
-<p>{food}</p>
+<p>{food_name}</p>
+<p>{food_description}</p>
 </body>
 </html>
-'''[1:-1].format(title=title,food=food_list[0]))
+'''[1:-1].format(title=title,food_name=food_list[0][0], food_description=food_list[0][1]))

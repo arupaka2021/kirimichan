@@ -6,10 +6,8 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
 form = cgi.FieldStorage()
 
-# 対象のフォーム変数名
+# menu1のカロリー取得
 params = ['menu1',]
-
-# 結果を受け取る辞書
 r = {}
 
 for p in params:
@@ -19,9 +17,50 @@ for p in params:
         r[p] = '(入力なし)'
 menu1 = r['menu1']
 import menu
-cal=int(menu.menu1[menu1])
+cal1=int(menu.menu1[menu1])
 
-sum_calorie = cal
+#menu2以降のカロリー取得
+params = ['menu2',]
+r = {}
+for p in params:
+    if p in form:
+        r[p] = form[p].value
+    else:
+        r[p] = '(入力なし)'
+menu2 = r['menu2']
+cal2=int(menu.menu2[menu2])
+
+params = ['menu3',]
+r = {}
+for p in params:
+    if p in form:
+        r[p] = form[p].value
+    else:
+        r[p] = '(入力なし)'
+menu3 = r['menu3']
+cal3=int(menu.menu3[menu3])
+
+params = ['menu4',]
+r = {}
+for p in params:
+    if p in form:
+        r[p] = form[p].value
+    else:
+        r[p] = '(入力なし)'
+menu4 = r['menu4']
+cal4=int(menu.menu4[menu4])
+
+params = ['menu5',]
+r = {}
+for p in params:
+    if p in form:
+        r[p] = form[p].value
+    else:
+        r[p] = '(入力なし)'
+menu5 = r['menu5']
+cal5=int(menu.menu5[menu5])
+
+sum_calorie = cal1 + cal2 + cal3 + cal4 + cal5
 
 title_str = 'カロリー合計'
 

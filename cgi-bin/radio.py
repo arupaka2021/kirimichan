@@ -19,6 +19,7 @@ Content-type: text/html
 <html lang="ja">
 <head>
     <meta charset="utf-8">
+	<script src="../js/radio.js"></script>
     <title>{title}</title>
 </head>
 
@@ -32,7 +33,7 @@ Content-type: text/html
 	<label><input type="radio" name="menu1" value="safuran" required>サフランライス</label><br>
 	<label><input type="radio" name="menu1" value="udon" required>うどん</label><br>
 	<label><input type="radio" name="menu1" value="somen" required>冷やしそうめん</label><br>
-	<label><input type="radio" name="menu1" value="others" required
+	<label><input type="radio" name="menu1" value="other" required
 				onclick="connecttext('text_menu1',this.checked);">その他</label>：
 	<input type="text" name="othertext" id="text_menu1" value="">
 </form>

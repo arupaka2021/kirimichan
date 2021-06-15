@@ -64,7 +64,7 @@ Content-type: text/html
 	<label><input type="radio" name="menu3" value="ポテトサラダ" required>ポテトサラダ</label><br>
 	<label><input type="radio" name="menu3" value="other" required
 				onclick="connecttext('text_menu',this.checked);">その他</label>：
-	<input type="text" name="othertext" id="text_menu" value="">
+	<input type="text" name="other3" id="text_menu" value="">
 </div>
 
 <div class="content">
@@ -78,7 +78,7 @@ Content-type: text/html
 	<label><input type="radio" name="menu4" value="コンソメスープ" required>コンソメスープ</label><br>
 	<label><input type="radio" name="menu4" value="other" required
 				onclick="connecttext('text_menu',this.checked);">その他</label>：
-	<input type="text" name="othertext" id="text_menu" value="">
+	<input type="text" name="other4" id="text_menu" value="">
 </div>
 
 <div class="content">
@@ -92,7 +92,7 @@ Content-type: text/html
 	<label><input type="radio" name="menu5" value="コーヒーゼリー" required>コーヒーゼリー</label><br>
 	<label><input type="radio" name="menu5" value="other" required
 				onclick="connecttext('text_menu',this.checked);">その他</label>：
-	<input type="text" name="othertext" id="text_menu" value="">
+	<input type="text" name="other5" id="text_menu" value="">
 </div>
 
 	<div class="control">

@@ -16,7 +16,7 @@ if FORM_NAME in form:
     #now = datetime.datetime.now()
     #fout = '../image/img'+now.strftime(%Y%m%d%H%M%S)
     #with open(os.path.join('..\\image\\', form["food_img"].value + os.path.basename(fileitem.filename)), 'wb') as fout:
-    with open(os.path.join('..\\image', os.path.basename(fileitem.filename)), 'wb') as fout:
+    with open(os.path.join('../image', os.path.basename(fileitem.filename)), 'wb') as fout:
         while 1:
             chunk = fileitem.file.read(100000)
             if not chunk: break

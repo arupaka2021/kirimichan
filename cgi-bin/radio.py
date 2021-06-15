@@ -19,7 +19,6 @@ Content-type: text/html
 <html lang="ja">
 <head>
     <meta charset="utf-8">
-	<script src="../js/radio.js"></script>
     <title>{title}</title>
 </head>
 
@@ -37,6 +36,22 @@ Content-type: text/html
 				onclick="connecttext('text_menu1',this.checked);">その他</label>：
 	<input type="text" name="othertext" id="text_menu1" value="">
 </form>
+
+
+<!-- ラジオボタンで「その他」が選択された場合のみテキストボックスへの入力を有効化する関数 -->
+
+<script type="text/javascript">
+function connecttext( textid, ischecked ) {
+	if( ischecked ) {
+		// チェックが入っていたら有効化
+		document.getElementById(textid).disabled = false;
+	}
+	else {
+		document.getElementById(textid).disabled = true;
+	}
+}
+</script>
+
 </body>
 </html>
 '''[1:-1].format(title=title_str))

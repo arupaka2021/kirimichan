@@ -53,12 +53,9 @@ Content-type: text/html
 <h2>あなたの１食当たりの適正カロリーは<span style="color:blue;">{0}</span>です！</h2>
 <p>適正カロリーを参考に献立を考えましょう。</p>
 
-<h1>主食</h1>
-
-
 <form action="sum_calorie.py" method="post">
 <div class="content">
-	<p>主食【必須】</p>
+	<h2>主食【必須】</h2>
 	<label><input type="radio" name="menu1" value="白米" required>白米</label><br>
 	<label><input type="radio" name="menu1" value="玄米" required>玄米</label><br>
 	<label><input type="radio" name="menu1" value="たけのこご飯" required>たけのこご飯</label><br>
@@ -72,7 +69,7 @@ Content-type: text/html
 </div>
 
 <div class="content">
-	<p>主菜【必須】</p>
+	<h2>主菜【必須】</h2>
 	<label><input type="radio" name="menu2" value="鮭の塩焼き" required>鮭の塩焼き</label><br>
 	<label><input type="radio" name="menu2" value="豚の生姜焼き" required>豚の生姜焼き</label><br>
 	<label><input type="radio" name="menu2" value="アジフライ" required>アジフライ</label><br>
@@ -86,7 +83,7 @@ Content-type: text/html
 </div>
 
 <div class="content">
-	<p>副菜【必須】</p>
+	<h2>副菜【必須】</h2>
 	<label><input type="radio" name="menu3" value="ほうれん草のおひたし" required>ほうれん草のおひたし</label><br>
 	<label><input type="radio" name="menu3" value="ひじきの煮物" required>ひじきの煮物</label><br>
 	<label><input type="radio" name="menu3" value="肉じゃが" required>肉じゃが</label><br>
@@ -100,7 +97,7 @@ Content-type: text/html
 </div>
 
 <div class="content">
-	<p>汁物【必須】</p>
+	<h2>汁物【必須】</h2>
 	<label><input type="radio" name="menu4" value="味噌汁" required>味噌汁</label><br>
 	<label><input type="radio" name="menu4" value="わかめスープ" required>わかめスープ</label><br>
 	<label><input type="radio" name="menu4" value="ミネストローネ" required>ミネストローネ</label><br>
@@ -114,7 +111,7 @@ Content-type: text/html
 </div>
 
 <div class="content">
-	<p>デザート【必須】</p>
+	<h2>デザート【必須】</h2>
 	<label><input type="radio" name="menu5" value="プリン" required>プリン</label><br>
 	<label><input type="radio" name="menu5" value="ヨーグルト" required>ヨーグルト</label><br>
 	<label><input type="radio" name="menu5" value="ショートケーキ" required>ショートケーキ</label><br>
@@ -134,13 +131,6 @@ Content-type: text/html
 
 </body>
 
-<main>
-    <section>
-    <form action="kirimi2.py" method="post">
 
-    <button class="btn">次へ</button>
-    </form>
-    </section>
-</main>
 </html>
 '''[1:-1].format(calorie))

@@ -24,7 +24,7 @@ Content-type: text/html
 </head>
 
 <body>
-<form action="sum_calorie2.py" method="post">
+<form action="sum_calorie.py" method="post">
 <div class="content">
 	<p>主食【必須】</p>
 	<label><input type="radio" name="menu1" value="白米" required>白米</label><br>
@@ -94,10 +94,6 @@ Content-type: text/html
 				onclick="connecttext('text_menu1',this.checked);">その他</label>：
 	<input type="text" name="othertext" id="text_menu1" value="">
 </div>
-
-
-</form>
-
 
 	<div class="control">
     <button type="submit"> 決定</button>

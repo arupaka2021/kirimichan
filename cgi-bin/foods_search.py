@@ -1,7 +1,6 @@
 #!/usr/share/nginx/.virtualenvs/env3.7/bin/python
-import cgi, sys, io
+import cgi, sys, io, cgitb, re
 import get_food_data as dat
-import cgitb
 
 # エラーメッセージ表示
 cgitb.enable()
@@ -23,13 +22,20 @@ for p in params:
     else:
         r[p] = '(入力なし)'
 
+# APIから結果を取得
 foods = dat.fs.foods_search(r['search_food'])
 
+# 取得したデータをリストに格納
 if __name__ == '__main__':
     food_list = []
 
     for food in foods:
-        food_list.append([food['food_name'], food['food_description']])
+        food_list.append([food['food_description']])
+
+# リストに格納した情報のうち、カロリーのみ取得
+res1 = re.sub(r".*Calories", "Calories", food_list[0][0]) #グラム情報の削除
+res2s = res1.split('|') #'|'で区切られた文字列を要素とするリストの作成
+res3s = re.sub(r'\D', '', res2s[0]) #カロリーの数値のみ抽出
 
 title = '食べ物の検索結果'
 
@@ -44,8 +50,7 @@ Content-type: text/html
 </head>
 
 <body>
-<p>{food_name}</p>
-<p>{food_description}</p>
+<p>{calorie}</p>
 </body>
 </html>
-'''[1:-1].format(title=title,food_name=food_list[0][0], food_description=food_list[0][1]))
+'''[1:-1].format(title=title, calorie=res3s))

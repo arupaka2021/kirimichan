@@ -1,5 +1,5 @@
 #!/usr/share/nginx/.virtualenvs/env3.7/bin/python
-import cv2, cgi, sys, io, os, cgitb, datetime
+import cv2, cgi, sys, io, os, cgitb, datetime, platform
 
 cgitb.enable()
 
@@ -15,10 +15,14 @@ if FORM_NAME in form:
     # ファイル名はアップロード時の時間から自動生成する（既存画像ファイルと重複するのを避けるため）
     now = datetime.datetime.now()
     file_path, file_ext = os.path.splitext(os.path.basename(fileitem.filename))
-    fname = '../image/img' + now.strftime('%Y%m%d%H%M%S') + file_ext
 
-    #with open(os.path.join('..\\image\\', form["food_img"].value + os.path.basename(fileitem.filename)), 'wb') as fout:
-    #fname = 'image/'+os.path.basename(fileitem.filename)
+    # imageフォルダを指定する場合、Windowsでは「image」、EC2(Linux)では「../image」が必要
+    if platform.system() == 'Windows':
+        IMGDIR = 'image/'
+    else:
+        IMGDIR = '../image/'
+    fname = IMGDIR + 'img' + now.strftime('%Y%m%d%H%M%S') + file_ext
+
     with open(fname, 'wb') as fout:
         fout.write(fileitem.file.read())
         fout.close()
@@ -47,16 +51,3 @@ Content-type: text/html
 </body>
 </html>
 '''[1:-1].format(fname=fname))
-
-else:
-    print('''
-Content-Type: text/html
-
-<html>
-<head></head>
-<body>
-<h1>Error</h1>
-<pre>{}</pre>
-</body>
-</html>
-'''[1:-1].format(type(form)))

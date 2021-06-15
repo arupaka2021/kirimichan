@@ -23,11 +23,12 @@ for p in params:
 
 # メニュー1のカロリーを出す
 if r['menu1'] == "ohter":
-	cal1 = int(get_calorie(r['other1']))
+	menu1 = r['other1']
+	#cal1 = int(get_calorie(menu1))
 else:
 	menu1 = r['menu1']
 	cal1 = int(menu.menu1[menu1])
-
+'''
 # メニュー2のカロリーを出す
 if r['menu2'] == "ohter":
 	cal2 = int(get_calorie(r['other2']))
@@ -55,9 +56,9 @@ if r['menu5'] == "ohter":
 else:
 	menu5 = r['menu5']
 	cal5 = int(menu.menu5[menu5])
-
+'''
 # カロリーの合計値を算出
-sum_calorie = cal1 + cal2 + cal3 + cal4 + cal5
+sum_calorie = menu1
 
 title_str = 'カロリー合計'
 

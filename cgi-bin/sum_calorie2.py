@@ -7,7 +7,7 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 form = cgi.FieldStorage()
 
 # menu1のカロリー取得
-params = ['menu1','menu2','menu3','menu4','menu5']
+params = ['menu1','menu2','menu3','menu4','menu5', 'ohter1']
 r = {}
 
 for p in params:

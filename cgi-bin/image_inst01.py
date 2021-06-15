@@ -18,10 +18,11 @@ if FORM_NAME in form:
 
     # imageフォルダを指定する場合、Windowsでは「image」、EC2(Linux)では「../image」が必要
     if platform.system() == 'Windows':
-        IMGDIR = 'image/'
+        LOCAL_CUR = ''
     else:
-        IMGDIR = '../image/'
-    fname = IMGDIR + 'img' + now.strftime('%Y%m%d%H%M%S') + file_ext
+        LOCAL_CUR = '../'
+    ABST_PATH = 'image/img' + now.strftime('%Y%m%d%H%M%S') + file_ext
+    fname = LOCAL_CUR + ABST_PATH
 
     with open(fname, 'wb') as fout:
         fout.write(fileitem.file.read())
@@ -48,6 +49,7 @@ Content-type: text/html
 
 <body>
 <h1>画像を{fname}の名前で保存しました。</h1>
+<div><img src="/{abst_path}" alt="{abst_path}"/></div>
 </body>
 </html>
-'''[1:-1].format(fname=fname))
+'''[1:-1].format(fname=fname,abst_path=ABST_PATH))

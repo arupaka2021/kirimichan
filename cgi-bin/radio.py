@@ -55,13 +55,13 @@ Content-type: text/html
 
 <div class="content">
 	<p>副菜【必須】</p>
-	<label><input type="radio" name="menu3" value="hakumai" required>ほうれん草のおひたし</label><br>
-	<label><input type="radio" name="menu3" value="genmai" required>ひじきの煮物</label><br>
-	<label><input type="radio" name="menu3" value="takenoko" required>肉じゃが</label><br>
-	<label><input type="radio" name="menu3" value="sekihan" required>茄子の揚げびたし</label><br>
-	<label><input type="radio" name="menu3" value="safuran" required>冷ややっこ</label><br>
-	<label><input type="radio" name="menu3" value="udon" required>冷やしトマト</label><br>
-	<label><input type="radio" name="menu3" value="somen" required>ポテトサラダ</label><br>
+	<label><input type="radio" name="menu3" value="ほうれん草のおひたし" required>ほうれん草のおひたし</label><br>
+	<label><input type="radio" name="menu3" value="ひじきの煮物" required>ひじきの煮物</label><br>
+	<label><input type="radio" name="menu3" value="肉じゃが" required>肉じゃが</label><br>
+	<label><input type="radio" name="menu3" value="茄子の揚げびたし" required>茄子の揚げびたし</label><br>
+	<label><input type="radio" name="menu3" value="冷ややっこ" required>冷ややっこ</label><br>
+	<label><input type="radio" name="menu3" value="冷やしトマト" required>冷やしトマト</label><br>
+	<label><input type="radio" name="menu3" value="ポテトサラダ" required>ポテトサラダ</label><br>
 	<label><input type="radio" name="menu3" value="other" required
 				onclick="connecttext('text_menu1',this.checked);">その他</label>：
 	<input type="text" name="othertext" id="text_menu1" value="">
@@ -69,13 +69,13 @@ Content-type: text/html
 
 <div class="content">
 	<p>汁物【必須】</p>
-	<label><input type="radio" name="menu4" value="genmai" required>味噌汁</label><br>
-	<label><input type="radio" name="menu4" value="takenoko" required>わかめスープ</label><br>
-	<label><input type="radio" name="menu4" value="sekihan" required>ミネストローネ</label><br>
-	<label><input type="radio" name="menu4" value="safuran" required>ビーフシチュー</label><br>
-	<label><input type="radio" name="menu4" value="udon" required>カレー</label><br>
-	<label><input type="radio" name="menu4" value="somen" required>コーンスープ</label><br>
-	<label><input type="radio" name="menu4" value="hakumai" required>コンソメスープ</label><br>
+	<label><input type="radio" name="menu4" value="味噌汁" required>味噌汁</label><br>
+	<label><input type="radio" name="menu4" value="わかめスープ" required>わかめスープ</label><br>
+	<label><input type="radio" name="menu4" value="ミネストローネ" required>ミネストローネ</label><br>
+	<label><input type="radio" name="menu4" value="ビーフシチュー" required>ビーフシチュー</label><br>
+	<label><input type="radio" name="menu4" value="カレー" required>カレー</label><br>
+	<label><input type="radio" name="menu4" value="コーンスープ" required>コーンスープ</label><br>
+	<label><input type="radio" name="menu4" value="コンソメスープ" required>コンソメスープ</label><br>
 	<label><input type="radio" name="menu4" value="other" required
 				onclick="connecttext('text_menu1',this.checked);">その他</label>：
 	<input type="text" name="othertext" id="text_menu1" value="">
@@ -83,13 +83,13 @@ Content-type: text/html
 
 <div class="content">
 	<p>デザート【必須】</p>
-	<label><input type="radio" name="menu5" value="hakumai" required>プリン</label><br>
-	<label><input type="radio" name="menu5" value="genmai" required>ヨーグルト</label><br>
-	<label><input type="radio" name="menu5" value="takenoko" required>ショートケーキ</label><br>
-	<label><input type="radio" name="menu5" value="sekihan" required>シュークリーム</label><br>
-	<label><input type="radio" name="menu5" value="safuran" required>りんご</label><br>
-	<label><input type="radio" name="menu5" value="udon" required>みかん</label><br>
-	<label><input type="radio" name="menu5" value="somen" required>コーヒーゼリー</label><br>
+	<label><input type="radio" name="menu5" value="プリン" required>プリン</label><br>
+	<label><input type="radio" name="menu5" value="ヨーグルト" required>ヨーグルト</label><br>
+	<label><input type="radio" name="menu5" value="ショートケーキ" required>ショートケーキ</label><br>
+	<label><input type="radio" name="menu5" value="シュークリーム" required>シュークリーム</label><br>
+	<label><input type="radio" name="menu5" value="りんご" required>りんご</label><br>
+	<label><input type="radio" name="menu5" value="みかん" required>みかん</label><br>
+	<label><input type="radio" name="menu5" value="コーヒーゼリー" required>コーヒーゼリー</label><br>
 	<label><input type="radio" name="menu5" value="other" required
 				onclick="connecttext('text_menu1',this.checked);">その他</label>：
 	<input type="text" name="othertext" id="text_menu1" value="">

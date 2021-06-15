@@ -15,7 +15,7 @@ if FORM_NAME in form:
     # ファイル名はアップロード時の時間から自動生成する（既存画像ファイルと重複するのを避けるため）
     now = datetime.datetime.now()
     file_path, file_ext = os.path.splitext(os.path.basename(fileitem.filename))
-    fname = 'image/img' + now.strftime('%Y%m%d%H%M%S') + file_ext
+    fname = 'img' + now.strftime('%Y%m%d%H%M%S') + file_ext
 
     #with open(os.path.join('..\\image\\', form["food_img"].value + os.path.basename(fileitem.filename)), 'wb') as fout:
     #fname = 'image/'+os.path.basename(fileitem.filename)

@@ -53,7 +53,7 @@ Content-type: text/html
 
 <main>
     <section>
-    <form action="kimiri2.py" method="post">
+    <form action="kirimi2.py" method="post">
 
     <button class="btn">次へ</button>
     </form>

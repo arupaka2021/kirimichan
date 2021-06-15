@@ -13,14 +13,14 @@ if FORM_NAME in form:
     fileitem = form[FORM_NAME]
 
     # ファイル名はアップロード時の時間から自動生成する（既存画像ファイルと重複するのを避けるため）
-    #now = datetime.datetime.now()
-    #fout = '../image/img'+now.strftime(%Y%m%d%H%M%S)
+    now = datetime.datetime.now()
+    file_path, file_ext = os.path.splitext(os.path.basename(fileitem.filename))
+    fname = 'image/img' + now.strftime('%Y%m%d%H%M%S') + file_ext
+
     #with open(os.path.join('..\\image\\', form["food_img"].value + os.path.basename(fileitem.filename)), 'wb') as fout:
-    with open(os.path.join('../image', os.path.basename(fileitem.filename)), 'wb') as fout:
-        while 1:
-            chunk = fileitem.file.read(100000)
-            if not chunk: break
-            fout.write (chunk)
+    #fname = 'image/'+os.path.basename(fileitem.filename)
+    with open(fname, 'wb') as fout:
+        fout.write(fileitem.file.read())
         fout.close()
 
     '''
@@ -43,10 +43,10 @@ Content-type: text/html
 </head>
 
 <body>
-<h1>画像を{img_name}の名前で保存しました。</h1>
+<h1>画像を{fname}の名前で保存しました。</h1>
 </body>
 </html>
-'''[1:-1].format(img_name=img_name))
+'''[1:-1].format(fname=fname))
 
 else:
     print('''

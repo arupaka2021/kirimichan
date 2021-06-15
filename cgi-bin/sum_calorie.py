@@ -17,33 +17,45 @@ for p in params:
     if p in form:
         r[p] = form[p].value
     else:
-        r[p] = '(入力なし)'
+        r[p] = ""
 
-# ラジオボタンで選択した食べ物のカロリーを格納
-menu1 = r['menu1']
-cal1=int(menu.menu1[menu1])
+# メニュー1のカロリーを出す
+if r['menu1'] == "ohter":
+	cal1 = get_calorie(r['other1'])
+else:
+	menu1 = r['menu1']
+	cal1 = int(menu.menu1[menu1])
 
-menu2 = r['menu2']
-cal2=int(menu.menu2[menu2])
+# メニュー2のカロリーを出す
+if r['menu2'] == "ohter":
+	cal2 = get_calorie(r['other2'])
+else:
+	menu2 = r['menu2']
+	cal2 = int(menu.menu2[menu])
 
-menu3 = r['menu3']
-cal3=int(menu.menu3[menu3])
+# メニュー3のカロリーを出す
+if r['menu3'] == "ohter":
+	cal3 = get_calorie(r['other3'])
+else:
+	menu3 = r['menu3']
+	cal3 = int(menu.menu3[menu3])
 
-menu4 = r['menu4']
-cal4=int(menu.menu4[menu4])
+# メニュー1のカロリーを出す
+if r['menu4'] == "ohter":
+	cal4 = get_calorie(r['other4'])
+else:
+	menu4 = r['menu4']
+	cal4 = int(menu.menu4[menu4])
 
-menu5 = r['menu5']
-cal5=int(menu.menu5[menu5])
-
-# 「その他」に入力した食べ物のカロリーを格納
-ohter1 = get_calorie(r['other1'])
-ohter2 = get_calorie(r['other2'])
-ohter3 = get_calorie(r['other3'])
-ohter4 = get_calorie(r['other4'])
-ohter5 = get_calorie(r['other5'])
+# メニュー5のカロリーを出す
+if r['menu5'] == "ohter":
+	cal5 = get_calorie(r['other5'])
+else:
+	menu5 = r['menu5']
+	cal5 = int(menu.menu5[menu5])
 
 # カロリーの合計値を算出
-sum_calorie = cal1 + cal2 + cal3 + cal4 + cal5 + ohter1 + ohter2 + ohter3 + ohter4 + ohter5
+sum_calorie = cal1 + cal2 + cal3 + cal4 + cal5
 
 title_str = 'カロリー合計'
 

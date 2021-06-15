@@ -23,35 +23,35 @@ for p in params:
 
 # メニュー1のカロリーを出す
 if r['menu1'] == "ohter":
-	cal1 = get_calorie(r['other1'])
+	cal1 = int(get_calorie(r['other1']))
 else:
 	menu1 = r['menu1']
 	cal1 = int(menu.menu1[menu1])
 
 # メニュー2のカロリーを出す
 if r['menu2'] == "ohter":
-	cal2 = get_calorie(r['other2'])
+	cal2 = int(get_calorie(r['other2']))
 else:
 	menu2 = r['menu2']
 	cal2 = int(menu.menu2[menu2])
 
 # メニュー3のカロリーを出す
 if r['menu3'] == "ohter":
-	cal3 = get_calorie(r['other3'])
+	cal3 = int(get_calorie(r['other3']))
 else:
 	menu3 = r['menu3']
 	cal3 = int(menu.menu3[menu3])
 
 # メニュー1のカロリーを出す
 if r['menu4'] == "ohter":
-	cal4 = get_calorie(r['other4'])
+	cal4 = int(get_calorie(r['other4']))
 else:
 	menu4 = r['menu4']
 	cal4 = int(menu.menu4[menu4])
 
 # メニュー5のカロリーを出す
 if r['menu5'] == "ohter":
-	cal5 = get_calorie(r['other5'])
+	cal5 = int(get_calorie(r['other5']))
 else:
 	menu5 = r['menu5']
 	cal5 = int(menu.menu5[menu5])

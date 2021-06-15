@@ -1,8 +1,28 @@
 import wikipediaapi
-    wiki_wiki = wikipediaapi.Wikipedia('en')
+wiki_wiki = wikipediaapi.Wikipedia(
+        language='en',
+        extract_format=wikipediaapi.ExtractFormat.WIKI
+)
 
-    print("Page - Title: %s" % page_py.title)
-    # Page - Title: Python (programming language)
+p_wiki = wiki_wiki.page("Test 1")
+print(p_wiki.text)
+# Summary
+# Section 1
+# Text of section 1
+# Section 1.1
+# Text of section 1.1
+# ...
 
-    print("Page - Summary: %s" % page_py.summary[0:60])
-    # Page - Summary: Python is a widely used high-level programming language for
+
+wiki_html = wikipediaapi.Wikipedia(
+        language='en',
+        extract_format=wikipediaapi.ExtractFormat.HTML
+)
+p_html = wiki_html.page("Test 1")
+print(p_html.text)
+# <p>Summary</p>
+# <h2>Section 1</h2>
+# <p>Text of section 1</p>
+# <h3>Section 1.1</h3>
+# <p>Text of section 1.1</p>
+# ...

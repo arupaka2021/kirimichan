@@ -24,7 +24,7 @@ img = cv2.imread(r['food_img'])
 
 # img変数に格納した画像データを指定したディレクトリに出力
 img_name = "sample1.jpeg"
-cv2.imwrite("image/{img_name}".format(img_name="img_name"), img)
+cv2.imwrite("../image/{img_name}".format(img_name="img_name"), img)
 
 print('''
 Content-type: text/html

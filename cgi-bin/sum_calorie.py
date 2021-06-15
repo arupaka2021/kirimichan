@@ -20,6 +20,8 @@ for p in params:
 
 sum_calorie = r['menu1']
 
+
+
 title_str = 'カロリー合計'
 
 print('''

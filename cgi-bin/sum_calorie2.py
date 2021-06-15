@@ -7,7 +7,7 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 form = cgi.FieldStorage()
 
 # menu1のカロリー取得
-params = ['menu1',]
+params = ['menu1','menu2','menu3','menu4','menu5']
 r = {}
 
 for p in params:
@@ -15,48 +15,19 @@ for p in params:
         r[p] = form[p].value
     else:
         r[p] = '(入力なし)'
+import menu        
 menu1 = r['menu1']
-import menu
 cal1=int(menu.menu1[menu1])
 
-#menu2以降のカロリー取得
-params = ['menu2',]
-r = {}
-for p in params:
-    if p in form:
-        r[p] = form[p].value
-    else:
-        r[p] = '(入力なし)'
 menu2 = r['menu2']
 cal2=int(menu.menu2[menu2])
 
-params = ['menu3',]
-r = {}
-for p in params:
-    if p in form:
-        r[p] = form[p].value
-    else:
-        r[p] = '(入力なし)'
 menu3 = r['menu3']
 cal3=int(menu.menu3[menu3])
 
-params = ['menu4',]
-r = {}
-for p in params:
-    if p in form:
-        r[p] = form[p].value
-    else:
-        r[p] = '(入力なし)'
 menu4 = r['menu4']
 cal4=int(menu.menu4[menu4])
 
-params = ['menu5',]
-r = {}
-for p in params:
-    if p in form:
-        r[p] = form[p].value
-    else:
-        r[p] = '(入力なし)'
 menu5 = r['menu5']
 cal5=int(menu.menu5[menu5])
 

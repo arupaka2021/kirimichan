@@ -95,6 +95,10 @@ Content-type: text/html
 	<input type="text" name="othertext" id="text_menu1" value="">
 </div>
 
+
+</form>
+
+
 	<div class="control">
     <button type="submit"> 決定</button>
 	</div>

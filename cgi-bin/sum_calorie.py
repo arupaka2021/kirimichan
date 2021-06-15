@@ -1,5 +1,6 @@
 #!/usr/share/nginx/.virtualenvs/env3.7/bin/python
 import cgi, sys, io
+from foods_search import get_calorie
 
 # 文字化け対策
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
@@ -7,7 +8,7 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 form = cgi.FieldStorage()
 
 # 対象のフォーム変数名
-params = ['menu1',]
+params = ['othertext',]
 
 # 結果を受け取る辞書
 r = {}
@@ -18,9 +19,7 @@ for p in params:
     else:
         r[p] = '(入力なし)'
 
-sum_calorie = r['menu1']
-
-
+sum_calorie = get_calorie(r['othertext'])
 
 title_str = 'カロリー合計'
 

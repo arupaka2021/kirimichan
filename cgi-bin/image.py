@@ -1,5 +1,7 @@
 #!/usr/share/nginx/.virtualenvs/env3.7/bin/python
-import cv2, cgi, sys, io
+import cv2, cgi, sys, io, cgitb
+
+cgitb.enable()
 
 # 文字化け対策
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')

@@ -1,6 +1,8 @@
 #!/usr/share/nginx/.virtualenvs/env3.7/bin/python
-import cgi, sys, io, menu
+import cgi, sys, io, menu, cgitb
 from foods_search import get_calorie
+
+cgitb.enable()
 
 # 文字化け対策
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
@@ -31,7 +33,7 @@ if r['menu2'] == "ohter":
 	cal2 = get_calorie(r['other2'])
 else:
 	menu2 = r['menu2']
-	cal2 = int(menu.menu2[menu])
+	cal2 = int(menu.menu2[menu2])
 
 # メニュー3のカロリーを出す
 if r['menu3'] == "ohter":

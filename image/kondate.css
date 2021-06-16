@@ -1,39 +1,46 @@
-.menu1 {
+.class1 {
     position: relative;
     margin: 50px;
     width: 500px;
     height: 500px;
-    background-color: gray;
+    background-color: rgb(243, 210, 120);
   }
    
+.menu1 {
+    position: absolute;
+    top: 300px;
+    left: 50px;
+    width: 100px;
+    height: 100px;
+  }
 .menu2 {
     position: absolute;
     top: 300px;
-    left: 100px;
-    width: 250px;
+    left: 150px;
+    width: 100px;
     height: 100px;
   }
 
 .menu3 {
-    position: relative;
-    margin: 50px;
-    width: 500px;
-    height: 500px;
-    background-color: gray;
+    position: absolute;
+    top: 200px;
+    left: 100px;
+    width: 100px;
+    height: 100px;
   }
-   
+
 .menu4 {
     position: absolute;
-    top: 300px;
-    left: 100px;
-    width: 250px;
+    top: 100px;
+    left: 50px;
+    width: 100px;
     height: 100px;
   }
 
 .menu5 {
     position: absolute;
-    top: 300px;
-    left: 100px;
-    width: 250px;
+    top: 100px;
+    left: 150px;
+    width: 100px;
     height: 100px;
   }

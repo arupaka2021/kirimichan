@@ -42,6 +42,7 @@ Content-type: text/html
 <head>
     <meta charset="utf-8">
     <title>{title}</title>
+    <link rel="stylesheet" href="/css/kondate.css">
 </head>
 
 <body>

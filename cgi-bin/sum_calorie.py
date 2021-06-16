@@ -22,7 +22,7 @@ for p in params:
         r[p] = ""
 
 # メニュー1のカロリーを出す
-if r['menu1'] == "ohter":
+if r['menu1'] == "other":
 	menu1 = r['other1']
 	#cal1 = int(get_calorie(menu1))
 else:

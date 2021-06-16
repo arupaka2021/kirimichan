@@ -41,7 +41,7 @@ Content-type: text/html
 <head>
 	<meta charset="utf-8">
 
-	<link rel="stylesheet" href="../css/kondate.css">
+	<link rel="stylesheet" href="../css/style.css">
 
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	<script src="../js/radio.js"></script>
@@ -50,8 +50,10 @@ Content-type: text/html
 </head>
 
 <body>
+	<div class="content">
 	<h2>あなたの１食当たりの適正カロリーは<span style="color:blue;">{calorie}</span>です！</h2>
 	<p>適正カロリーを参考に献立を考えましょう。</p>
+	</div>
 
 	<form action="sum_calorie.py" method="post">
 		<input type="hidden" name="calorie" value="{calorie}">
@@ -120,8 +122,8 @@ Content-type: text/html
 			<input type="text" name="other5" id="text_menu5" value="" disabled>
 		</div>
 
-		<div class="control">
-			<button type="submit"> 決定</button>
+		<div class="content">
+			<button class="button-deco" type="submit"> 決定</button>
 		</div>
 	</form>
 </body>

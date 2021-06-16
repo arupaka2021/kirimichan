@@ -7,7 +7,7 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 form = cgi.FieldStorage()
 
 # menu1のカロリー取得
-params = ['menu1','menu2','menu3','menu4','menu5', 'ohter1']
+params = ['menu1','menu2','menu3','menu4','menu5']
 r = {}
 
 for p in params:
@@ -29,9 +29,8 @@ menu4 = r['menu4']
 gazo4=gazo.menu4[menu4]
 
 menu5 = r['menu5']
-gazo5=gazo.menu5[menu]
+gazo5=gazo.menu5[menu5]
 
-sum_calorie = cal1 + cal2 + cal3 + cal4 + cal5
 
 title_str = 'カロリー合計'
 
@@ -46,7 +45,8 @@ Content-type: text/html
 </head>
 
 <body>
-	<img src="image/{gazo}">
+
+<img src="image/{gazo}" alt="主食の画像">
 </body>
 </html>
 '''[1:-1].format(title=title_str, gazo=gazo1))

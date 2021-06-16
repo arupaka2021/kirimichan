@@ -16,8 +16,8 @@
 
 	<form action="cgi-bin/kirimi.py" method="get">
 		<div>
-			<label for="age">１．年齢 <span class="required">【必須】</span></label>
-			<input type="number" name="age" required>
+			<label for="age">１．年齢（18歳-120歳） <span class="required">【必須】</span></label>
+			<input type="number" name="age" min="18" max="120" required>
 		</div>
 		<div>
 			<label for="gender">２．性別 <span class="required">【必須】</span></label>
@@ -25,7 +25,7 @@
 			<input type="radio" name="gender" value="女性" required>女性    	    
 		</div>
 		<div>
-			<label for="katudou">３．活動量<span class="required">　【必須】　</span></label>
+			<label for="katudou">３．活動量<span class="required">【必須】</span></label>
 			<input type="radio" name="katudou" value="高" required>高
 			<input type="radio" name="katudou" value="中" required>中
 			<input type="radio" name="katudou" value="低" required>低

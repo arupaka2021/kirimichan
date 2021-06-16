@@ -10,7 +10,7 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 form = cgi.FieldStorage()
 
 # 対象のフォーム変数名
-params = ['menu1','menu2','menu3','menu4','menu5','other1','other2','other3','other4','other5',]
+params = ['calorie','menu1','menu2','menu3','menu4','menu5','other1','other2','other3','other4','other5',]
 
 # 結果を受け取る辞書
 r = {}
@@ -64,7 +64,7 @@ else:
 # カロリーの合計値を算出
 sum_calorie = cal1 + cal2 + cal3 + cal4 + cal5
 
-title_str = 'カロリー合計'
+title_str = '献立のカロリーと写真'
 
 print('''
 Content-type: text/html
@@ -73,11 +73,15 @@ Content-type: text/html
 <html lang="ja">
 <head>
     <meta charset="utf-8">
+	
+	<link rel="stylesheet" href="../css/kondate.css">
+
     <title>{title}</title>
 </head>
 
 <body>
-	<p>{sum_calorie}</p>
+	<p>適正カロリーは{calorie}です。</p>
+	<p>献立のカロリーは{sum_calorie}です。</p>
 </body>
 </html>
-'''[1:-1].format(title=title_str, sum_calorie=sum_calorie))
+'''[1:-1].format(title=title_str, calorie=r['calorie'], sum_calorie=sum_calorie))

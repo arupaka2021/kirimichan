@@ -53,7 +53,7 @@ Content-type: text/html
 <h2>あなたの１食当たりの適正カロリーは<span style="color:blue;">{0}</span>です！</h2>
 <p>適正カロリーを参考に献立を考えましょう。</p>
 
-<form action="sum_calorie3.py" method="post">
+<form action="sum_calorie_fin.py" method="post">
 <div class="content">
 	<h2>主食【必須】</h2>
 	<label><input type="radio" name="menu1" value="白米" required>白米</label><br>

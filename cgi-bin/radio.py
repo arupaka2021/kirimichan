@@ -112,7 +112,7 @@ Content-type: text/html
 	$(function(){
 	$( 'input[name="menu1"]:radio' ).change( function() {
 		var radioval = $(this).val();
-		if(radioval == 5){
+		if(radioval == other){
 			$('#text_menu').removeAttr('disabled');
 		}else{
 			$('#text_menu').attr('disabled','disabled'); 

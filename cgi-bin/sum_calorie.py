@@ -1,5 +1,5 @@
 #!/usr/share/nginx/.virtualenvs/env3.7/bin/python
-import cgi, sys, io, menu, cgitb
+import cgi, sys, io, cgitb, menu, gazo 
 from foods_search import get_calorie
 
 cgitb.enable()
@@ -74,6 +74,13 @@ elif calorie > sum_calorie:
 else:
 	advice = "さらに低カロリーな献立を目指して再チャレンジしましょう！"
 
+# 画像を変数に格納
+gazo1 = gazo.menu1[menu1]
+gazo2 = gazo.menu2[menu2]
+gazo3 = gazo.menu3[menu3]
+gazo4 = gazo.menu4[menu4]
+gazo5 = gazo.menu5[menu5]
+
 title_str = '結果'
 
 print('''
@@ -93,6 +100,13 @@ Content-type: text/html
 	<p>適正カロリーは{calorie}です。</p>
 	<p>献立のカロリーは{sum_calorie}です。</p>
 	<p>{advice}</p>
+
+	<img src="/image/{gazo1}" alt="主食の画像" class="menu1">
+    <img src="/image/{gazo2}" alt="主菜の画像" class="menu2">
+    <img src="/image/{gazo3}" alt="副菜の画像" class="menu3">
+    <img src="/image/{gazo4}" alt="汁物の画像" class="menu4">
+    <img src="/image/{gazo5}" alt="デザートの画像" class="menu5">
+
 </body>
 </html>
-'''[1:-1].format(title=title_str, calorie=calorie, sum_calorie=sum_calorie, advice=advice))
+'''[1:-1].format(title=title_str, calorie=calorie, sum_calorie=sum_calorie, advice=advice, gazo1=gazo1, gazo2=gazo2, gazo3=gazo3, gazo4=gazo4, gazo5=gazo5))

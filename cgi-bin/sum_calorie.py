@@ -1,13 +1,17 @@
 #!/usr/share/nginx/.virtualenvs/env3.7/bin/python
-import cgi, sys, io, cgitb, menu, gazo 
+import cgi, sys, io, cgitb, requests, urllib, menu, gazo 
 from foods_search import get_calorie
+from google_trans_new import google_translator
 
+# エラーメッセージ表示
 cgitb.enable()
 
 # 文字化け対策
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 
 form = cgi.FieldStorage()
+
+translator = google_translator()
 
 # 対象のフォーム変数名
 params = ['calorie','menu1','menu2','menu3','menu4','menu5','other1','other2','other3','other4','other5',]
@@ -26,42 +30,87 @@ calorie = int(r['calorie'])
 # メニュー1のカロリーを変数に格納
 if r['menu1'] == "other":
 	menu1 = r['other1']
-	cal1 = int(get_calorie(menu1))
+	menu1_en = translator.translate(menu1, lang_tgt='en')
+	cal1 = int(get_calorie(menu1_en))
+
+	# WikipediaAPIから画像取得
+	parameter1 = urllib.parse.quote(menu1)
+	url = "https://ja.wikipedia.org/w/api.php?action=query&format=json&formatversion=2&prop=pageimages&piprop=original&titles="+parameter1
+	res= requests.get(url)
+	data = res.json()
+	gazo1 = (data["query"]["pages"][0]["original"]["source"])
 else:
 	menu1 = r['menu1']
 	cal1 = int(menu.menu1[menu1])
+	gazo1 = gazo.menu1[menu1]
 
 # メニュー2のカロリーを変数に格納
 if r['menu2'] == "other":
 	menu2 = r['other2']
-	cal2 = int(get_calorie(menu2))
+	menu2_en = translator.translate(menu2, lang_tgt='en')
+	cal2 = int(get_calorie(menu2_en))
+
+	# WikipediaAPIから画像取得
+	parameter1 = urllib.parse.quote(menu2)
+	url = "https://ja.wikipedia.org/w/api.php?action=query&format=json&formatversion=2&prop=pageimages&piprop=original&titles="+parameter1
+	res= requests.get(url)
+	data = res.json()
+	gazo2 = (data["query"]["pages"][0]["original"]["source"])
 else:
 	menu2 = r['menu2']
 	cal2 = int(menu.menu2[menu2])
+	gazo2 = gazo.menu2[menu2]
 
 # メニュー3のカロリーを変数に格納
 if r['menu3'] == "other":
 	menu3 = r['other3']
-	cal3 = int(get_calorie(menu3))
+	menu3_en = translator.translate(menu3, lang_tgt='en')
+	cal3 = int(get_calorie(menu3_en))
+
+	# WikipediaAPIから画像取得
+	parameter1 = urllib.parse.quote(menu3)
+	url = "https://ja.wikipedia.org/w/api.php?action=query&format=json&formatversion=2&prop=pageimages&piprop=original&titles="+parameter1
+	res= requests.get(url)
+	data = res.json()
+	gazo3 = (data["query"]["pages"][0]["original"]["source"])
 else:
 	menu3 = r['menu3']
 	cal3 = int(menu.menu3[menu3])
+	gazo3 = gazo.menu3[menu3]
 
 # メニュー4のカロリーを変数に格納
 if r['menu4'] == "other":
 	menu4 = r['other4']
-	cal4 = int(get_calorie(menu4))
+	menu4_en = translator.translate(menu4, lang_tgt='en')
+	cal4 = int(get_calorie(menu4_en))
+
+	# WikipediaAPIから画像取得
+	parameter1 = urllib.parse.quote(menu4)
+	url = "https://ja.wikipedia.org/w/api.php?action=query&format=json&formatversion=2&prop=pageimages&piprop=original&titles="+parameter1
+	res= requests.get(url)
+	data = res.json()
+	gazo4 = (data["query"]["pages"][0]["original"]["source"])
 else:
 	menu4 = r['menu4']
 	cal4 = int(menu.menu4[menu4])
+	gazo4 = gazo.menu4[menu4]
 
 # メニュー5のカロリーを変数に格納
 if r['menu5'] == "other":
 	menu5 = r['other5']
-	cal5 = int(get_calorie(menu5))
+	menu5_en = translator.translate(menu5, lang_tgt='en')
+	cal5 = int(get_calorie(menu5_en))
+
+	# WikipediaAPIから画像取得
+	parameter1 = urllib.parse.quote(menu5)
+	url = "https://ja.wikipedia.org/w/api.php?action=query&format=json&formatversion=2&prop=pageimages&piprop=original&titles="+parameter1
+	res= requests.get(url)
+	data = res.json()
+	gazo5 = (data["query"]["pages"][0]["original"]["source"])
 else:
 	menu5 = r['menu5']
 	cal5 = int(menu.menu5[menu5])
+	gazo5 = gazo.menu5[menu5]
 
 # カロリーの合計値を算出
 sum_calorie = cal1 + cal2 + cal3 + cal4 + cal5
@@ -70,16 +119,9 @@ sum_calorie = cal1 + cal2 + cal3 + cal4 + cal5
 if calorie == sum_calorie:
 	advice = "ピッタリ賞です！100万円をあげたいです！"
 elif calorie > sum_calorie:
-	advice = "さらに高カロリーな献立を目指して再チャレンジしましょう！"
+	advice = "さらなる高カロリーを目指して再チャレンジしましょう！"
 else:
-	advice = "さらに低カロリーな献立を目指して再チャレンジしましょう！"
-
-# 画像を変数に格納
-gazo1 = gazo.menu1[menu1]
-gazo2 = gazo.menu2[menu2]
-gazo3 = gazo.menu3[menu3]
-gazo4 = gazo.menu4[menu4]
-gazo5 = gazo.menu5[menu5]
+	advice = "さらなる低カロリーを目指して再チャレンジしましょう！"
 
 title_str = '結果'
 

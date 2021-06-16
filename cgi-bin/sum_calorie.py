@@ -42,7 +42,7 @@ if r['menu1'] == "other":
 else:
 	menu1 = r['menu1']
 	cal1 = int(menu.menu1[menu1])
-	gazo1 = gazo.menu1[menu1]
+	gazo1 = "/image/" + gazo.menu1[menu1]
 
 # メニュー2のカロリーを変数に格納
 if r['menu2'] == "other":
@@ -59,7 +59,7 @@ if r['menu2'] == "other":
 else:
 	menu2 = r['menu2']
 	cal2 = int(menu.menu2[menu2])
-	gazo2 = gazo.menu2[menu2]
+	gazo2 = "/image/" + gazo.menu2[menu2]
 
 # メニュー3のカロリーを変数に格納
 if r['menu3'] == "other":
@@ -76,7 +76,7 @@ if r['menu3'] == "other":
 else:
 	menu3 = r['menu3']
 	cal3 = int(menu.menu3[menu3])
-	gazo3 = gazo.menu3[menu3]
+	gazo3 = "/image/" + gazo.menu3[menu3]
 
 # メニュー4のカロリーを変数に格納
 if r['menu4'] == "other":
@@ -93,7 +93,7 @@ if r['menu4'] == "other":
 else:
 	menu4 = r['menu4']
 	cal4 = int(menu.menu4[menu4])
-	gazo4 = gazo.menu4[menu4]
+	gazo4 = "/image/" + gazo.menu4[menu4]
 
 # メニュー5のカロリーを変数に格納
 if r['menu5'] == "other":
@@ -110,7 +110,7 @@ if r['menu5'] == "other":
 else:
 	menu5 = r['menu5']
 	cal5 = int(menu.menu5[menu5])
-	gazo5 = gazo.menu5[menu5]
+	gazo5 = "/image/" + gazo.menu5[menu5]
 
 # カロリーの合計値を算出
 sum_calorie = cal1 + cal2 + cal3 + cal4 + cal5
@@ -146,11 +146,11 @@ Content-type: text/html
 	</div>
 
 	<div class="obon">
-		<img src="/image/{gazo1}" alt="主食の画像" class="menu1">
-		<img src="/image/{gazo2}" alt="主菜の画像" class="menu2">
-		<img src="/image/{gazo3}" alt="副菜の画像" class="menu3">
-		<img src="/image/{gazo4}" alt="汁物の画像" class="menu4">
-		<img src="/image/{gazo5}" alt="デザートの画像" class="menu5">
+		<img src="{gazo1}" alt="主食の画像" class="menu1">
+		<img src="{gazo2}" alt="主菜の画像" class="menu2">
+		<img src="{gazo3}" alt="副菜の画像" class="menu3">
+		<img src="{gazo4}" alt="汁物の画像" class="menu4">
+		<img src="{gazo5}" alt="デザートの画像" class="menu5">
 	</div>
 </body>
 </html>

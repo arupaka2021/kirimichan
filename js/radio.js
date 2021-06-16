@@ -10,11 +10,8 @@ $(function() {{
             $('#text_menu').prop("disabled", true);       
         }}
     }});
-}});
 
-$(function() {{
-    console.log('Reached!');
-    $('input[name="menu2"]').on('click', function() {{
+	$('input[name="menu2"]').on('click', function() {{
         menu2_val = $('[name="menu2"]:checked').val();
         console.log(menu2_val);
         if ( menu2_val == 'other') {{
@@ -24,11 +21,8 @@ $(function() {{
             $('#text_menu').prop("disabled", true);       
         }}
     }});
-}});
 
-$(function() {{
-    console.log('Reached!');
-    $('input[name="menu3"]').on('click', function() {{
+	$('input[name="menu3"]').on('click', function() {{
         menu3_val = $('[name="menu3"]:checked').val();
         console.log(menu3_val);
         if ( menu3_val == 'other') {{
@@ -38,10 +32,7 @@ $(function() {{
             $('#text_menu').prop("disabled", true);       
         }}
     }});
-}});
 
-$(function() {{
-    console.log('Reached!');
     $('input[name="menu4"]').on('click', function() {{
         menu4_val = $('[name="menu4"]:checked').val();
         console.log(menu4_val);
@@ -52,10 +43,7 @@ $(function() {{
             $('#text_menu').prop("disabled", true);       
         }}
     }});
-}});
 
-$(function() {{
-    console.log('Reached!');
     $('input[name="menu5"]').on('click', function() {{
         menu5_val = $('[name="menu5"]:checked').val();
         console.log(menu5_val);

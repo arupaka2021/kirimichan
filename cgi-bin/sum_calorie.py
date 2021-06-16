@@ -118,6 +118,8 @@ sum_calorie = cal1 + cal2 + cal3 + cal4 + cal5
 # アドバイスを変数に格納
 if calorie == sum_calorie:
 	advice = "ピッタリ賞です！100万円をあげたいです！"
+elif calorie + 65 >= sum_calorie and calorie - 65 <= sum_calorie:
+	advice = "適正カロリー範囲内で献立を作れました！すごい！"
 elif calorie > sum_calorie:
 	advice = "さらなる高カロリーを目指して再チャレンジしましょう！"
 else:

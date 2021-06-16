@@ -25,9 +25,9 @@ button {
 .obon {
 	position: relative;
 	background-color: rgba(3, 0, 0, 0.712);
+    margin: 50px;
     width: 600px;
-    margin: 10px auto;
-    border: 1px solid #d1d1d1;
+    height: 380px;
 	padding: 30px;
 }
 

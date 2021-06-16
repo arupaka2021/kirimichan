@@ -101,11 +101,11 @@ Content-type: text/html
 <head>
     <meta charset="utf-8">
     <title>{title}</title>
-    <link rel="stylesheet" href="/css/kondate.css">
+    <link rel="stylesheet" href="kondate.css">
 </head>
 
 <body>
-	<p>{sum_calorie}</p>
+	<p>合計カロリーは{sum_calorie}kcalです！</p>
 
     <img src="/image/{gazo1}" alt="主食の画像" class="menu1">
     <img src="/image/{gazo2}" alt="主菜の画像" class="menu2">

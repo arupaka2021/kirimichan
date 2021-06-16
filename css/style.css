@@ -42,7 +42,7 @@ button {
     height: 170px;
 }
 
-.menu2 {
+.menu4 {
 	position: absolute;
     top: 180px;
     left: 410px;
@@ -50,7 +50,7 @@ button {
     height: 170px;
 }
 
-.menu3 {
+.menu2 {
 	position: absolute;
     top: 70px;
     left: 200px;
@@ -58,7 +58,7 @@ button {
     height: 200px;
 }
 
-.menu4 {
+.menu3 {
 	position: absolute;
     top: 30px;
     left: 50px;

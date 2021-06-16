@@ -46,12 +46,13 @@ Content-type: text/html
 </head>
 
 <body>
-
-<img src="/image/{gazo1}" alt="主食の画像">
-<img src="/image/{gazo2}" alt="主菜の画像">
-<img src="/image/{gazo3}" alt="副菜の画像">
-<img src="/image/{gazo4}" alt="汁物の画像">
-<img src="/image/{gazo5}" alt="デザートの画像">
+<div class="class1">
+<img src="/image/{gazo1}" alt="主食の画像" class="menu1">
+<img src="/image/{gazo2}" alt="主菜の画像" class="menu2">
+<img src="/image/{gazo3}" alt="副菜の画像" class="menu3">
+<img src="/image/{gazo4}" alt="汁物の画像" class="menu4">
+<img src="/image/{gazo5}" alt="デザートの画像" class="menu5">
+</div>
 
 </body>
 </html>

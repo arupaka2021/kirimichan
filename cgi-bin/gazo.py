@@ -1,5 +1,5 @@
-menu1 = {'白米': 'syushoku1.jpg', '玄米': 'genmai.png', 'たけのこご飯': 240, '赤飯': 280, 'サフランライス': 340, 'うどん': 340, 'そうめん': 180, 'other':0}
-menu2 = {'鮭の塩焼き': 110, '豚の生姜焼き': 350, 'アジフライ': 280, 'ハンバーグ': 440, '餃子': 400, 'えび天': 100, '唐揚げ': 240, 'other':0 }
-menu3 = {'ほうれん草のおひたし': 30, 'ひじきの煮物': 130, '肉じゃが': 170, '茄子の揚げびたし': 90, '冷ややっこ': 200, '冷やしトマト': 30, 'ポテトサラダ':270, 'other':0 }
-menu4 = {'味噌汁': 30, 'わかめスープ': 30, 'ミネストローネ': 70, 'ビーフシチュー': 600, 'カレー': 420, 'コーンスープ': 90, 'コンソメスープ':80, 'other':0}
-menu5 = {'プリン': 200, 'ヨーグルト': 70, 'ショートケーキ': 300, 'シュークリーム': 200, 'りんご': 60, 'みかん': 30, 'コーヒーゼリー': 140, 'other':0}
+menu1 = {'白米': 'syushoku1.jpg', '玄米': 'genmai.png', 'たけのこご飯': 'takenoko.jpg', '赤飯': 'sekihan.jpg', 'サフランライス': 'sahuran.jpg', 'うどん': 'udon.jpg', 'そうめん': 'soumen.jpg', 'other':0}
+menu2 = {'鮭の塩焼き': 'sake.jpg', '豚の生姜焼き': 'syogayaki.jpeg', 'アジフライ': 'azihurai.jpg', 'ハンバーグ': 'hanbagu.jpeg', '餃子': 'gyoza.jpg', 'えび天': 'ebiten.jpg', '唐揚げ': 'karaage.jpg', 'other':0 }
+menu3 = {'ほうれん草のおひたし': 'hourensou.jpeg', 'ひじきの煮物': 'hiziki.jpg', '肉じゃが': 'nikuzyaga.jpg', '茄子の揚げびたし': 'nasu.jpg', '冷ややっこ': 'hiyayakko.jpeg', '冷やしトマト': 'tomato.jpg', 'ポテトサラダ':'potesara.jpg', 'other':0 }
+menu4 = {'味噌汁': 'shiru1.jpeg', 'わかめスープ': 'wakamesupu.jpg', 'ミネストローネ': 'minesutorone.jpg', 'ビーフシチュー': 'bihusityu.jpg', 'カレー': 'kare.jpg', 'コーンスープ': 'konsupu.jpg', 'コンソメスープ':'konsome.jpg', 'other':0}
+menu5 = {'プリン': 'purin.jpg', 'ヨーグルト': 'yoguruto.jpg', 'ショートケーキ': 'syotokeki.jpg', 'シュークリーム': 'syukurimu.jpg', 'りんご': 'ringo.jpeg', 'みかん': 'mikan.jpg', 'コーヒーゼリー': 'kohi.jpg', 'other':0}

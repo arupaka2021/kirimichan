@@ -92,6 +92,13 @@ menu5 = r['menu5']
 gazo5=gazo.menu5[menu5]
 
 
+params = ['calorie',]
+r = {}
+for p in params:
+    if p in form:
+        r[p] = form[p].value
+    else:
+        r[p] = '(なし)'
 
 print('''
 Content-type: text/html
@@ -101,12 +108,12 @@ Content-type: text/html
 <head>
     <meta charset="utf-8">
     <title>{title}</title>
-    <link rel="stylesheet" href="kondate.css">
+    <link rel="stylesheet" href="/css/kondate.css">
 </head>
 
 <body>
 	<p>合計カロリーは{sum_calorie}kcalです！</p>
-
+    <p>{calorie}</p>
     <img src="/image/{gazo1}" alt="主食の画像" class="menu1">
     <img src="/image/{gazo2}" alt="主菜の画像" class="menu2">
     <img src="/image/{gazo3}" alt="副菜の画像" class="menu3">
@@ -116,4 +123,4 @@ Content-type: text/html
 
 </body>
 </html>
-'''[1:-1].format(title=title_str, sum_calorie=sum_calorie, gazo1=gazo1, gazo2=gazo2, gazo3=gazo3, gazo4=gazo4, gazo5=gazo5))
+'''[1:-1].format(title=title_str, sum_calorie=sum_calorie, caloire=r['calorie'], gazo1=gazo1, gazo2=gazo2, gazo3=gazo3, gazo4=gazo4, gazo5=gazo5))

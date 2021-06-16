@@ -52,7 +52,7 @@ Content-type: text/html
 
 <h2>あなたの１食当たりの適正カロリーは<span style="color:blue;">{0}</span>です！</h2>
 <p>適正カロリーを参考に献立を考えましょう。</p>
-
+<section>
 <form action="sum_calorie_fin.py" method="post">
 <div class="content">
 	<h2>主食【必須】</h2>
@@ -124,6 +124,8 @@ Content-type: text/html
 	<input type="text" name="other5" id="text_menu" value="">
 </div>
 
+	<input type="hidden" name="gender" value="{calorie}"/>
+</section>
 	<div class="control">
     <button type="submit"> 決定</button>
 	</div>

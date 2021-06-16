@@ -19,7 +19,9 @@ Content-type: text/html
 <html lang="ja">
 <head>
     <meta charset="utf-8">
-	<script src="../js/radio.js"></script>
+
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 
     <title>{title}</title>
 </head>
@@ -99,10 +101,24 @@ Content-type: text/html
     <button type="submit"> 決定</button>
 	</div>
 </form>
-
-
 </body>
 
 
+<!-- Radio Button with JQuery -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
+	<script>
+	$(function(){
+	$( 'input[name="menu1"]:radio' ).change( function() {
+		var radioval = $(this).val();
+		if(radioval == 5){
+			$('#text_menu').removeAttr('disabled');
+		}else{
+			$('#text_menu').attr('disabled','disabled'); 
+		}
+	}); 
+	});
+	</script>
 </html>
 '''[1:-1].format(title=title_str))

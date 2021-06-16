@@ -14,14 +14,16 @@ params = ['calorie','menu1','menu2','menu3','menu4','menu5','other1','other2','o
 
 # 結果を受け取る辞書
 r = {}
-
 for p in params:
     if p in form:
         r[p] = form[p].value
     else:
         r[p] = ""
 
-# メニュー1のカロリーを出す
+# 適正カロリーを変数に格納
+calorie = int(r['calorie'])
+
+# メニュー1のカロリーを変数に格納
 if r['menu1'] == "other":
 	menu1 = r['other1']
 	cal1 = int(get_calorie(menu1))
@@ -29,7 +31,7 @@ else:
 	menu1 = r['menu1']
 	cal1 = int(menu.menu1[menu1])
 
-# メニュー2のカロリーを出す
+# メニュー2のカロリーを変数に格納
 if r['menu2'] == "other":
 	menu2 = r['other2']
 	cal2 = int(get_calorie(menu2))
@@ -37,7 +39,7 @@ else:
 	menu2 = r['menu2']
 	cal2 = int(menu.menu2[menu2])
 
-# メニュー3のカロリーを出す
+# メニュー3のカロリーを変数に格納
 if r['menu3'] == "other":
 	menu3 = r['other3']
 	cal3 = int(get_calorie(menu3))
@@ -45,7 +47,7 @@ else:
 	menu3 = r['menu3']
 	cal3 = int(menu.menu3[menu3])
 
-# メニュー1のカロリーを出す
+# メニュー4のカロリーを変数に格納
 if r['menu4'] == "other":
 	menu4 = r['other4']
 	cal4 = int(get_calorie(menu4))
@@ -53,7 +55,7 @@ else:
 	menu4 = r['menu4']
 	cal4 = int(menu.menu4[menu4])
 
-# メニュー5のカロリーを出す
+# メニュー5のカロリーを変数に格納
 if r['menu5'] == "other":
 	menu5 = r['other5']
 	cal5 = int(get_calorie(menu5))
@@ -64,7 +66,15 @@ else:
 # カロリーの合計値を算出
 sum_calorie = cal1 + cal2 + cal3 + cal4 + cal5
 
-title_str = '献立のカロリーと写真'
+# アドバイスを変数に格納
+if calorie == sum_calorie:
+	advice = "ピッタリ賞です！100万円をあげたいです！"
+elif calorie > sum_calorie:
+	advice = "さらに高カロリーな献立を目指して再チャレンジしましょう！"
+else:
+	advice = "さらに低カロリーな献立を目指して再チャレンジしましょう！"
+
+title_str = '結果'
 
 print('''
 Content-type: text/html
@@ -82,6 +92,7 @@ Content-type: text/html
 <body>
 	<p>適正カロリーは{calorie}です。</p>
 	<p>献立のカロリーは{sum_calorie}です。</p>
+	<p>{advice}</p>
 </body>
 </html>
-'''[1:-1].format(title=title_str, calorie=r['calorie'], sum_calorie=sum_calorie))
+'''[1:-1].format(title=title_str, calorie=calorie, sum_calorie=sum_calorie, advice=advice))

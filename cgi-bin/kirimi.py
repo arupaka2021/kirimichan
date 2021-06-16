@@ -1,15 +1,13 @@
 #!/usr/share/nginx/.virtualenvs/env3.7/bin/python
 
 import io, sys, cgi, cgitb
-import calorie
+import good_calorie
 
 # エラーメッセージ表示
 cgitb.enable()
 
 # 文字化け対策
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
-
-title_str = '献立作成'
 
 form = cgi.FieldStorage()
 
@@ -29,9 +27,11 @@ elif age >= 50 and age < 69 :
 else:
     nenrei="70-120"
 
-cal = int(calorie.calorie[gender][nenrei][katudou])
+cal = int(good_calorie.calorie[gender][nenrei][katudou])
 calo = cal /3
 calorie = round(calo) 
+
+title_str = '献立作成'
 
 print('''
 Content-type: text/html
@@ -126,4 +126,4 @@ Content-type: text/html
 	</form>
 </body>
 </html>
-'''[1:-1].format(calorie))
+'''[1:-1].format(title=title_str, calorie=calorie))

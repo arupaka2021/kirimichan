@@ -11,7 +11,10 @@ body {
 }
 
 button {
-	width: 100%;
+	width: 300px;
+    height: 51px;
+    line-height: 51px;
+    font-size: 14px;
     background-color: #f58e4a;
     color: #fff;
 }
@@ -25,9 +28,9 @@ button {
 .obon {
 	position: relative;
 	background-color: rgba(3, 0, 0, 0.712);
-    width: 600px;
-    margin: 10px auto;
-    border: 1px solid #d1d1d1;
+    margin: 50px auto;
+    width: 550px;
+    height: 320px;
 	padding: 30px;
 }
 
@@ -39,7 +42,7 @@ button {
     height: 170px;
 }
 
-.menu2 {
+.menu4 {
 	position: absolute;
     top: 180px;
     left: 410px;
@@ -47,7 +50,7 @@ button {
     height: 170px;
 }
 
-.menu3 {
+.menu2 {
 	position: absolute;
     top: 70px;
     left: 200px;
@@ -55,7 +58,7 @@ button {
     height: 200px;
 }
 
-.menu4 {
+.menu3 {
 	position: absolute;
     top: 30px;
     left: 50px;

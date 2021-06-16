@@ -4,7 +4,10 @@ def get_calorie(food="banana"):
     import get_food_data as dat
 
     # APIから結果を取得
-    foods = dat.fs.foods_search(food)
+    try:
+        foods = dat.fs.foods_search(food)
+    except KeyError:
+        foods = dat.fs.foods_search("banana")
     
     # 取得したデータをリストに格納
     food_list = []

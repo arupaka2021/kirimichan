@@ -20,8 +20,8 @@ Content-type: text/html
 <head>
     <meta charset="utf-8">
 
-	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script src="../js/radio.js"></script>
 
     <title>{title}</title>
 </head>
@@ -37,8 +37,9 @@ Content-type: text/html
 	<label><input type="radio" name="menu1" value="サフランライス" required>サフランライス</label><br>
 	<label><input type="radio" name="menu1" value="うどん" required>うどん</label><br>
 	<label><input type="radio" name="menu1" value="そうめん" required>そうめん</label><br>
-	<label><input type="radio" name="menu1" value="other">その他：</label>
-	<input type="text" name="other1" id="text_menu" disabled="disabled">
+	<label><input type="radio" name="menu1" value="other" required>その他：</label>
+	<input type="text" name="other1" id="text_menu" value="" disabled>
+
 </div>
 
 <div class="content">
@@ -50,9 +51,8 @@ Content-type: text/html
 	<label><input type="radio" name="menu2" value="餃子" required>餃子</label><br>
 	<label><input type="radio" name="menu2" value="えび天" required>えび天</label><br>
 	<label><input type="radio" name="menu2" value="唐揚げ" required>唐揚げ</label><br>
-	<label><input type="radio" name="menu2" value="other" required
-				onclick="connecttext('text_menu',this.checked);">その他</label>：
-	<input type="text" name="other2" id="text_menu" value="">
+	<label><input type="radio" name="menu2" value="other" required>その他：</label>
+	<input type="text" name="other2" id="text_menu" value="" disabled>
 </div>
 
 <div class="content">
@@ -64,9 +64,8 @@ Content-type: text/html
 	<label><input type="radio" name="menu3" value="冷ややっこ" required>冷ややっこ</label><br>
 	<label><input type="radio" name="menu3" value="冷やしトマト" required>冷やしトマト</label><br>
 	<label><input type="radio" name="menu3" value="ポテトサラダ" required>ポテトサラダ</label><br>
-	<label><input type="radio" name="menu3" value="other" required
-				onclick="connecttext('text_menu',this.checked);">その他</label>：
-	<input type="text" name="other3" id="text_menu" value="">
+	<label><input type="radio" name="menu3" value="other" required>その他：</label>
+	<input type="text" name="other3" id="text_menu" value="" disabled>
 </div>
 
 <div class="content">
@@ -78,9 +77,8 @@ Content-type: text/html
 	<label><input type="radio" name="menu4" value="カレー" required>カレー</label><br>
 	<label><input type="radio" name="menu4" value="コーンスープ" required>コーンスープ</label><br>
 	<label><input type="radio" name="menu4" value="コンソメスープ" required>コンソメスープ</label><br>
-	<label><input type="radio" name="menu4" value="other" required
-				onclick="connecttext('text_menu',this.checked);">その他</label>：
-	<input type="text" name="other4" id="text_menu" value="">
+	<label><input type="radio" name="menu4" value="other" required>その他：</label>
+	<input type="text" name="other4" id="text_menu" value="" disabled>
 </div>
 
 <div class="content">
@@ -92,9 +90,8 @@ Content-type: text/html
 	<label><input type="radio" name="menu5" value="りんご" required>りんご</label><br>
 	<label><input type="radio" name="menu5" value="みかん" required>みかん</label><br>
 	<label><input type="radio" name="menu5" value="コーヒーゼリー" required>コーヒーゼリー</label><br>
-	<label><input type="radio" name="menu5" value="other" required
-				onclick="connecttext('text_menu',this.checked);">その他</label>：
-	<input type="text" name="other5" id="text_menu" value="">
+	<label><input type="radio" name="menu5" value="other" required>その他：</label>
+	<input type="text" name="other5" id="text_menu" value="" disabled>
 </div>
 
 	<div class="control">
@@ -102,23 +99,5 @@ Content-type: text/html
 	</div>
 </form>
 </body>
-
-
-<!-- Radio Button with JQuery -->
-	<script src="js/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-
-	<script>
-	$(function(){
-	$( 'input[name="menu1"]:radio' ).change( function() {
-		var radioval = $(this).val();
-		if(radioval == other){
-			$('#text_menu').removeAttr('disabled');
-		}else{
-			$('#text_menu').attr('disabled','disabled'); 
-		}
-	}); 
-	});
-	</script>
 </html>
 '''[1:-1].format(title=title_str))

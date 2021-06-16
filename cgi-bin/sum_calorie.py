@@ -28,7 +28,7 @@ if r['menu1'] == "other":
 else:
 	menu1 = r['menu1']
 	cal1 = int(menu.menu1[menu1])
-'''
+
 # メニュー2のカロリーを出す
 if r['menu2'] == "other":
 	menu2 = r['other2']
@@ -60,9 +60,9 @@ if r['menu5'] == "other":
 else:
 	menu5 = r['menu5']
 	cal5 = int(menu.menu5[menu5])
-'''
+
 # カロリーの合計値を算出
-sum_calorie = cal1
+sum_calorie = cal1 + cal2 + cal3 + cal4 + cal5
 
 title_str = 'カロリー合計'
 

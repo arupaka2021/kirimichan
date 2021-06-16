@@ -19,7 +19,8 @@ Content-type: text/html
 <html lang="ja">
 <head>
     <meta charset="utf-8">
-	<script scr="../js/radio.js"></script>
+	
+
     <title>{title}</title>
 </head>
 

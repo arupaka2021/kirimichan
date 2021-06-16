@@ -36,9 +36,12 @@ if r['menu1'] == "other":
 	# WikipediaAPIから画像取得
 	parameter1 = urllib.parse.quote(menu1)
 	url = "https://ja.wikipedia.org/w/api.php?action=query&format=json&formatversion=2&prop=pageimages&piprop=original&titles="+parameter1
-	res= requests.get(url)
+	res = requests.get(url)
 	data = res.json()
-	gazo1 = (data["query"]["pages"][0]["original"]["source"])
+	try:
+		gazo1 = (data["query"]["pages"][0]["original"]["source"])
+	except KeyError:
+		gazo1 = "/image/noimage.jpg"
 else:
 	menu1 = r['menu1']
 	cal1 = int(menu.menu1[menu1])
@@ -55,7 +58,10 @@ if r['menu2'] == "other":
 	url = "https://ja.wikipedia.org/w/api.php?action=query&format=json&formatversion=2&prop=pageimages&piprop=original&titles="+parameter1
 	res= requests.get(url)
 	data = res.json()
-	gazo2 = (data["query"]["pages"][0]["original"]["source"])
+	try:
+		gazo2 = (data["query"]["pages"][0]["original"]["source"])
+	except KeyError:
+		gazo2 = "/image/noimage.jpg"
 else:
 	menu2 = r['menu2']
 	cal2 = int(menu.menu2[menu2])
@@ -72,7 +78,10 @@ if r['menu3'] == "other":
 	url = "https://ja.wikipedia.org/w/api.php?action=query&format=json&formatversion=2&prop=pageimages&piprop=original&titles="+parameter1
 	res= requests.get(url)
 	data = res.json()
-	gazo3 = (data["query"]["pages"][0]["original"]["source"])
+	try:
+		gazo3 = (data["query"]["pages"][0]["original"]["source"])
+	except KeyError:
+		gazo3 = "/image/noimage.jpg"
 else:
 	menu3 = r['menu3']
 	cal3 = int(menu.menu3[menu3])
@@ -89,7 +98,10 @@ if r['menu4'] == "other":
 	url = "https://ja.wikipedia.org/w/api.php?action=query&format=json&formatversion=2&prop=pageimages&piprop=original&titles="+parameter1
 	res= requests.get(url)
 	data = res.json()
-	gazo4 = (data["query"]["pages"][0]["original"]["source"])
+	try:
+		gazo4 = (data["query"]["pages"][0]["original"]["source"])
+	except KeyError:
+		gazo4 = "/image/noimage.jpg"
 else:
 	menu4 = r['menu4']
 	cal4 = int(menu.menu4[menu4])
@@ -106,7 +118,10 @@ if r['menu5'] == "other":
 	url = "https://ja.wikipedia.org/w/api.php?action=query&format=json&formatversion=2&prop=pageimages&piprop=original&titles="+parameter1
 	res= requests.get(url)
 	data = res.json()
-	gazo5 = (data["query"]["pages"][0]["original"]["source"])
+	try:
+		gazo5 = (data["query"]["pages"][0]["original"]["source"])
+	except KeyError:
+		gazo5 = "/image/noimage.jpg"
 else:
 	menu5 = r['menu5']
 	cal5 = int(menu.menu5[menu5])

@@ -10,7 +10,7 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 form = cgi.FieldStorage()
 
 # 対象のフォーム変数名
-params = ['menu1','menu2','menu3','menu4','menu5','ohter1','ohter2','ohter3','ohter4','ohter5',]
+params = ['menu1','menu2','menu3','menu4','menu5','other1','other2','other3','other4','other5',]
 
 # 結果を受け取る辞書
 r = {}

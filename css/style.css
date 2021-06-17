@@ -1,10 +1,10 @@
 
 body {
-    background-image: url("/image/haikei1.png"),url("/image/haikei.jpeg");
-    background-size: 20% auto, 100% auto;
-    background-position: right 5% bottom 10%, left top;
+    background-image: url("/image/menma.png"), url("/image/haikei1.png"), url("/image/haikei.jpeg");
+    background-size: 10% auto, 20% auto, 100% auto;
+    background-position: right 5% bottom 10%, left 5% bottom 15%, left top;
     
-    background-repeat: no-repeat,no-repeat;
+    background-repeat: no-repeat,no-repeat,no-repeat;
 }
 
 head {

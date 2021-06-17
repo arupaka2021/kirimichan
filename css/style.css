@@ -1,13 +1,33 @@
+
 body {
-    background-color: #e9b898;
+    background-image: url("/image/kirimi.jpg");
+    background-size: cover;
+    font-family: "Helvetica Neue", sans-serif;
+}
+
+head {
+    width:800px;
+    height:auto;
+    display: block;
+    margin: auto;
 }
 
 .content {
-    background-color: #fff;
+    background: rgba(255, 255, 255, 0.8);
     width: 600px;
     margin: 10px auto;
     border: 1px solid #d1d1d1;
     padding: 30px;
+    border-radius: 20px;
+}
+
+.p{
+    width: 100%; /*absoluteで位置を設定するときに、幅と高さは必ず必要*/
+    height: 1.5em;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+
 }
 
 button {

@@ -5,9 +5,10 @@ body {
 }
 
 head {
-    text-align: center;
-    width:500px;
+    width:800px;
     height:auto;
+    display: block;
+    margin: auto;
 }
 
 .content {

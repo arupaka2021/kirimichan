@@ -21,6 +21,8 @@ head {
     border: 1px solid #d1d1d1;
     padding: 30px;
     border-radius: 20px;
+    font-size: 120%;
+    font-weight: bold;
 }
 
 .wf-roundedmplus1c { font-family: "Rounded Mplus 1c"; }

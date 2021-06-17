@@ -1,7 +1,8 @@
-.body {
+
+body {
     background-image: url("/image/kirimi.jpg");
     background-size: cover;
-  }
+}
 
 .content {
     background-color: #fff;

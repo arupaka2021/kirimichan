@@ -41,7 +41,7 @@ Content-type: text/html
 <head>
 	<meta charset="utf-8">
 
-	<link rel="stylesheet" href="../css/style.css">
+	<link rel="stylesheet" href="../css/style2.css">
 
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 	<script src="../js/radio.js"></script>

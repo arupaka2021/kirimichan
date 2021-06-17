@@ -4,6 +4,12 @@ body {
     background-size: cover;
 }
 
+head {
+    text-align: center;
+    width:500px;
+    height:auto;
+}
+
 .content {
     background: rgba(255, 255, 255, 0.8);
     width: 600px;

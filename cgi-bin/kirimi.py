@@ -122,7 +122,7 @@ Content-type: text/html
 			<input type="text" name="other5" id="text_menu5" value="" disabled>
 		</div>
 
-		<div class="content">
+		<div class="button-center">
 			<button class="button-deco" type="submit"> 決定</button>
 		</div>
 	</form>

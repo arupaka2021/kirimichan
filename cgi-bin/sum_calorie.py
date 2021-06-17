@@ -167,14 +167,14 @@ Content-type: text/html
 	</div>
 
 	<div class="obon">
-		<img src="{gazo1}" alt="主食の画像" class="menu1">
-		<img src="{gazo2}" alt="主菜の画像" class="menu2">
-		<img src="{gazo3}" alt="副菜の画像" class="menu3">
-		<img src="{gazo4}" alt="汁物の画像" class="menu4">
-		<img src="{gazo5}" alt="デザートの画像" class="menu5">
+		<img src="{gazo1}" alt="主食の画像" title="{cal1}kcal" class="menu1">
+		<img src="{gazo2}" alt="主菜の画像" title="{cal2}kcal" class="menu2">
+		<img src="{gazo3}" alt="副菜の画像" title="{cal3}kcal" class="menu3">
+		<img src="{gazo4}" alt="汁物の画像" title="{cal4}kcal" class="menu4">
+		<img src="{gazo5}" alt="デザートの画像"  title="{cal5}kcal" class="menu5">
 	</div>
 	{cal1};{cal2};{cal3};{cal4};{cal5}
-	<div>
+	<div class="button-center">
 		<button class="button-deco" type="button" onclick="location.pathname='../index.html'"> ホームへ戻る</button>
 	</div>
 </body>

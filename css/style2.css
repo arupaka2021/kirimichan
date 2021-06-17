@@ -37,6 +37,10 @@ button {
 	cursor: pointer; /* マウスカーソルを乗せると指になる */
 }
 
+.button-center {
+    text-align: center;
+}
+
 .obon {
 	position: relative;
 	background-color: rgba(3, 0, 0, 0.712);

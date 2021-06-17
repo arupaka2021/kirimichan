@@ -1,3 +1,22 @@
+button {
+	width: 300px;
+    height: 51px;
+    line-height: 51px;
+    font-size: 14px;
+    background-color: #f58e4a;
+    color: #fff;
+}
+
+.button-deco {
+	border: none;  /* 枠線を消す */
+    outline: none; /* クリックしたときに表示される枠線を消す */
+	cursor: pointer; /* マウスカーソルを乗せると指になる */
+}
+
+.button-center {
+  text-align: center;
+}
+
 .class1 {
     position: relative;
     margin: 50px;

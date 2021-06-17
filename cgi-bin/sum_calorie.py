@@ -157,6 +157,9 @@ Content-type: text/html
 	<link rel="stylesheet" href="../css/style.css">
 
     <title>{title}</title>
+	<div class = "head">
+    <img src="/image/head.jpg">
+    </div>
 </head>
 
 <body>

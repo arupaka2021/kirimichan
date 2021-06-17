@@ -12,8 +12,12 @@ def get_calorie(food="banana"):
     # 取得したデータをリストに格納
     food_list = []
 
-    for food in foods:
-        food_list.append([food['food_description']])
+    # 取得したデータのうち、栄養情報のみ抽出
+    try:
+        for food in foods:
+            food_list.append([food['food_description']])
+    except:
+        food_list.append(['Per 100g - Calories: 0kcal | Fat: 0g | Carbs: 0g | Protein: 0g'])
 
     # リストに格納した情報のうち、カロリーのみ取得
     res1 = re.sub(r".*Calories", "Calories", food_list[0][0]) #グラム情報の削除

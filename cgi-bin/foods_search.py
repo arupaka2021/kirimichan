@@ -6,7 +6,7 @@ def get_calorie(food="banana"):
     # APIから結果を取得
     try:
         foods = dat.fs.foods_search(food)
-    except KeyError:
+    except:
         foods = dat.fs.foods_search("banana")
     
     # 取得したデータをリストに格納

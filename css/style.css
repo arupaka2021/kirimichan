@@ -1,6 +1,6 @@
 
 body {
-    background-image: url("/image/kirimi.jpg");
+    background-image: url("/image/kabegami.jpg");
     background-size: cover;
     font-family: "Helvetica Neue", sans-serif;
 }
@@ -53,7 +53,7 @@ button {
 
 .obon {
 	position: relative;
-	background-color: rgba(3, 0, 0, 0.712);
+	background-color: rgba(3, 0, 0, 0.9);
     margin: 50px auto;
     width: 550px;
     height: 320px;

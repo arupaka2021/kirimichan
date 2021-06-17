@@ -51,7 +51,7 @@ Content-type: text/html
 
 <body>
 	<div class="content">
-	<h2>あなたの１食当たりの適正カロリーは<span style="color:blue;">{calorie}</span>です！</h2>
+	<h2>あなたの１食当たりの適正カロリーは<span style="color:blue;">{calorie}</span>kcalです！</h2>
 	<p>適正カロリーを参考に献立を考えましょう。</p>
 	</div>
 

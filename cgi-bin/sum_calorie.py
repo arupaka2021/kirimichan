@@ -161,8 +161,8 @@ Content-type: text/html
 
 <body>
 	<div class="content">
-		<p>適正カロリーは{calorie}です。</p>
-		<p>献立のカロリーは{sum_calorie}です。</p>
+		<p>適正カロリーは{calorie}kcalです。</p>
+		<p>献立のカロリーは{sum_calorie}kcalです。</p>
 		<p>{advice}</p>
 	</div>
 

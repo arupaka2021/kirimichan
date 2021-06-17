@@ -134,15 +134,15 @@ sum_calorie = cal1 + cal2 + cal3 + cal4 + cal5
 if calorie == sum_calorie:
 	advice = "ピッタリ賞です！100万円をあげたいです！"
 elif calorie + 65 >= sum_calorie and calorie - 65 <= sum_calorie:
-	advice = "適正カロリー範囲内で献立を作れました！すごい！この調子で健康的な食生活を心がけましょう！"
+	advice = "適正カロリー範囲内で献立を作れました！すごい！<br>この調子で健康的な食生活を心がけましょう！"
 elif calorie + 500 < sum_calorie:
-	advice = "さすがに食べすぎです！ヘルシーな献立に変更して再チャレンジしましょう！"
+	advice = "さすがに食べすぎです！<br>ヘルシーな献立に変更して再チャレンジしましょう！"
 elif calorie - 500 > sum_calorie:
-	advice = "カロリーがかなり足りていません！力が出るような献立を意識して再チャレンジしましょう！"
+	advice = "カロリーがかなり足りていません！<br>力が出るような献立を意識して再チャレンジしましょう！"
 elif calorie > sum_calorie:
-	advice = "適正カロリーに達していません！高カロリーのものを加えて再チャレンジしましょう！"
+	advice = "適正カロリーに達していません！<br>高カロリーのものを加えて再チャレンジしましょう！"
 else:
-	advice = "適正カロリーを超えています！さらなる低カロリーを目指して再チャレンジしましょう！"
+	advice = "適正カロリーを超えています！<br>さらなる低カロリーを目指して再チャレンジしましょう！"
 
 title_str = '結果'
 

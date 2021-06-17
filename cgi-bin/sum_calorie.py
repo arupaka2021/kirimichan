@@ -169,6 +169,10 @@ Content-type: text/html
 		<img src="{gazo4}" alt="汁物の画像" class="menu4">
 		<img src="{gazo5}" alt="デザートの画像" class="menu5">
 	</div>
+
+	<div>
+		<button class="button-deco" type="button" onclick="location.pathname='../index.html'"> ホームへ戻る</button>
+	</div>
 </body>
 </html>
 '''[1:-1].format(title=title_str, calorie=calorie, sum_calorie=sum_calorie, advice=advice, gazo1=gazo1, gazo2=gazo2, gazo3=gazo3, gazo4=gazo4, gazo5=gazo5))

@@ -6,14 +6,21 @@ body {
 
 .content {
     background-color: #fff;
-    opacity: 0.5;
+    opacity: 0.7;
     width: 600px;
     margin: 10px auto;
     border: 1px solid #d1d1d1;
     padding: 30px;
 }
 
+.p{
+    width: 100%; /*absoluteで位置を設定するときに、幅と高さは必ず必要*/
+    height: 1.5em;
+    color: black;
+    font-weight: bold;
+    text-align: center;
 
+}
 
 button {
 	width: 300px;

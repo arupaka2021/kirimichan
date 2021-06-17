@@ -1,8 +1,10 @@
 
 body {
-    background-image: url("/image/kabegami.jpg");
-    background-size: cover;
+    background-image: url("/image/haikei.jpeg"),url("/image/haikei1.png");
+    background-size: 100% auto,20% auto;
+    background-position: left top, right 10% bottom 10%;
     font-family: "Helvetica Neue", sans-serif;
+    background-repeat: no-repeat,no-repeat;
 }
 
 head {
@@ -20,6 +22,8 @@ head {
     padding: 30px;
     border-radius: 20px;
 }
+
+.wf-roundedmplus1c { font-family: "Rounded Mplus 1c"; }
 
 .p{
     width: 100%; /*absoluteで位置を設定するときに、幅と高さは必ず必要*/

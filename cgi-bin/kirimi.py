@@ -66,7 +66,7 @@ Content-type: text/html
 			<label><input type="radio" name="menu1" value="サフランライス" required>サフランライス</label><br>
 			<label><input type="radio" name="menu1" value="うどん" required>うどん</label><br>
 			<label><input type="radio" name="menu1" value="そうめん" required>そうめん</label><br>
-			<label><input type="radio" name="menu1" value="other" required>その他：</label>
+			<label><input type="radio" name="menu1" value="other" required>その他（10字以内）：</label>
 			<input type="text" name="other1" id="text_menu1" value="" maxlength=10 disabled>
 		</div>
 
@@ -79,7 +79,7 @@ Content-type: text/html
 			<label><input type="radio" name="menu2" value="餃子" required>餃子</label><br>
 			<label><input type="radio" name="menu2" value="えび天" required>えび天</label><br>
 			<label><input type="radio" name="menu2" value="唐揚げ" required>唐揚げ</label><br>
-			<label><input type="radio" name="menu2" value="other" required>その他：</label>
+			<label><input type="radio" name="menu2" value="other" required>その他（10字以内）：</label>
 			<input type="text" name="other2" id="text_menu2" value="" maxlength=10 disabled>
 		</div>
 
@@ -92,7 +92,7 @@ Content-type: text/html
 			<label><input type="radio" name="menu3" value="冷ややっこ" required>冷ややっこ</label><br>
 			<label><input type="radio" name="menu3" value="冷やしトマト" required>冷やしトマト</label><br>
 			<label><input type="radio" name="menu3" value="ポテトサラダ" required>ポテトサラダ</label><br>
-			<label><input type="radio" name="menu3" value="other" required>その他：</label>
+			<label><input type="radio" name="menu3" value="other" required>その他（10字以内）：</label>
 			<input type="text" name="other3" id="text_menu3" value="" maxlength=10 disabled>
 		</div>
 
@@ -105,7 +105,7 @@ Content-type: text/html
 			<label><input type="radio" name="menu4" value="カレー" required>カレー</label><br>
 			<label><input type="radio" name="menu4" value="コーンスープ" required>コーンスープ</label><br>
 			<label><input type="radio" name="menu4" value="コンソメスープ" required>コンソメスープ</label><br>
-			<label><input type="radio" name="menu4" value="other" required>その他：</label>
+			<label><input type="radio" name="menu4" value="other" required>その他（10字以内）：</label>
 			<input type="text" name="other4" id="text_menu4" value="" maxlength=10 disabled>
 		</div>
 
@@ -118,7 +118,7 @@ Content-type: text/html
 			<label><input type="radio" name="menu5" value="りんご" required>りんご</label><br>
 			<label><input type="radio" name="menu5" value="みかん" required>みかん</label><br>
 			<label><input type="radio" name="menu5" value="コーヒーゼリー" required>コーヒーゼリー</label><br>
-			<label><input type="radio" name="menu5" value="other" required>その他：</label>
+			<label><input type="radio" name="menu5" value="other" required>その他（10字以内）：</label>
 			<input type="text" name="other5" id="text_menu5" value="" maxlength=10 disabled>
 		</div>
 

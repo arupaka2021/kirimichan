@@ -5,6 +5,13 @@ body {
     font-family: "Helvetica Neue", sans-serif;
 }
 
+head {
+    width:800px;
+    height:auto;
+    display: block;
+    margin: auto;
+}
+
 .content {
     background: rgba(255, 255, 255, 0.8);
     width: 600px;

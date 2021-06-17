@@ -135,7 +135,7 @@ if calorie == sum_calorie:
 	advice = "ピッタリ賞です！100万円をあげたいです！"
 elif calorie + 65 >= sum_calorie and calorie - 65 <= sum_calorie:
 	advice = "適正カロリー範囲内で献立を作れました！すごい！この調子で健康的な食生活を心がけましょう！"
-elif calorie + 500 > sum_calorie:
+elif calorie + 500 < sum_calorie:
 	advice = "さすがに食べすぎです！ヘルシーな献立に変更して再チャレンジしましょう！"
 elif calorie - 500 > sum_calorie:
 	advice = "カロリーがかなり足りていません！力が出るような献立を意識して再チャレンジしましょう！"

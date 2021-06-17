@@ -7,7 +7,7 @@ cgitb.enable()
 
 # 文字化け対策
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
-
+'''
 form = cgi.FieldStorage()
 
 # 対象のフォーム変数名
@@ -24,6 +24,8 @@ for p in params:
 
 # APIから結果を取得
 foods = dat.fs.foods_search(r['search_food'])
+'''
+foods = dat.fs.foods_search("Phoenix")
 
 # 取得したデータをリストに格納
 if __name__ == '__main__':
@@ -53,4 +55,4 @@ Content-type: text/html
 <p>{calorie}</p>
 </body>
 </html>
-'''[1:-1].format(title=title, calorie=res3s))
+'''[1:-1].format(title=title, calorie=foods))

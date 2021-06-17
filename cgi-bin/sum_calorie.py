@@ -174,7 +174,7 @@ Content-type: text/html
 		<img src="{gazo5}" alt="デザートの画像"  title="{cal5}kcal" class="menu5">
 	</div>
 	{cal1};{cal2};{cal3};{cal4};{cal5}
-	<div>
+	<div class="button-center">
 		<button class="button-deco" type="button" onclick="location.pathname='../index.html'"> ホームへ戻る</button>
 	</div>
 </body>

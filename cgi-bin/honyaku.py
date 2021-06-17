@@ -10,7 +10,7 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
 from google_trans_new import google_translator  
 
 translator = google_translator()  
-translate_text = translator.translate('สวัสดีจีน',lang_tgt='en')  
+translate_text = translator.translate('鳳凰',lang_tgt='en')  
 
 
 print('''

@@ -1,108 +1,154 @@
 #!/usr/share/nginx/.virtualenvs/env3.7/bin/python
 
-import io, sys, cgi, cgitb
+import io, sys, os, json, codecs, random, datetime, cgi, cgitb
 
-# エラーメッセージ表示
 cgitb.enable()
 
 # 文字化け対策
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
-
-title_str = 'ラジオボタン'
-
-form = cgi.FieldStorage()
-
 print('''
 Content-type: text/html
 
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="utf-8">
-	<script scr="../js/radio.js"></script>
-    <title>{title}</title>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>おすすめの本紹介</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="ここにサイト説明を入れます">
+<meta name="keywords" content="キーワード１,キーワード２,キーワード３,キーワード４,キーワード５">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style-opening.css">
+<script src="js/fixmenu_pagetop.js"></script>
+<script src="js/openclose.js"></script>
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
 </head>
 
 <body>
-<form action="sum_calorie2.py" method="post">
-<div class="content">
-	<p>主食【必須】</p>
-	<label><input type="radio" name="menu1" value="白米" required>白米</label><br>
-	<label><input type="radio" name="menu1" value="玄米" required>玄米</label><br>
-	<label><input type="radio" name="menu1" value="たけのこご飯" required>たけのこご飯</label><br>
-	<label><input type="radio" name="menu1" value="赤飯" required>赤飯</label><br>
-	<label><input type="radio" name="menu1" value="サフランライス" required>サフランライス</label><br>
-	<label><input type="radio" name="menu1" value="うどん" required>うどん</label><br>
-	<label><input type="radio" name="menu1" value="そうめん" required>そうめん</label><br>
-	<label><input type="radio" name="menu1" value="other" required
-				onclick="connecttext('text_menu1',this.checked);">その他</label>：
-	<input type="text" name="othertext" id="text_menu1" value="">
-</div>
 
-<div class="content">
-	<p>主菜【必須】</p>
-	<label><input type="radio" name="menu2" value="鮭の塩焼き" required>鮭の塩焼き</label><br>
-	<label><input type="radio" name="menu2" value="豚の生姜焼き" required>豚の生姜焼き</label><br>
-	<label><input type="radio" name="menu2" value="アジフライ" required>アジフライ</label><br>
-	<label><input type="radio" name="menu2" value="ハンバーグ" required>ハンバーグ</label><br>
-	<label><input type="radio" name="menu2" value="餃子" required>餃子</label><br>
-	<label><input type="radio" name="menu2" value="えび天" required>えび天</label><br>
-	<label><input type="radio" name="menu2" value="唐揚げ" required>唐揚げ</label><br>
-	<label><input type="radio" name="menu2" value="other" required
-				onclick="connecttext('text_menu1',this.checked);">その他</label>：
-	<input type="text" name="othertext" id="text_menu1" value="">
-</div>
+<div id="container">
 
-<div class="content">
-	<p>副菜【必須】</p>
-	<label><input type="radio" name="menu3" value="ほうれん草のおひたし" required>ほうれん草のおひたし</label><br>
-	<label><input type="radio" name="menu3" value="ひじきの煮物" required>ひじきの煮物</label><br>
-	<label><input type="radio" name="menu3" value="肉じゃが" required>肉じゃが</label><br>
-	<label><input type="radio" name="menu3" value="茄子の揚げびたし" required>茄子の揚げびたし</label><br>
-	<label><input type="radio" name="menu3" value="冷ややっこ" required>冷ややっこ</label><br>
-	<label><input type="radio" name="menu3" value="冷やしトマト" required>冷やしトマト</label><br>
-	<label><input type="radio" name="menu3" value="ポテトサラダ" required>ポテトサラダ</label><br>
-	<label><input type="radio" name="menu3" value="other" required
-				onclick="connecttext('text_menu1',this.checked);">その他</label>：
-	<input type="text" name="othertext" id="text_menu1" value="">
-</div>
-
-<div class="content">
-	<p>汁物【必須】</p>
-	<label><input type="radio" name="menu4" value="味噌汁" required>味噌汁</label><br>
-	<label><input type="radio" name="menu4" value="わかめスープ" required>わかめスープ</label><br>
-	<label><input type="radio" name="menu4" value="ミネストローネ" required>ミネストローネ</label><br>
-	<label><input type="radio" name="menu4" value="ビーフシチュー" required>ビーフシチュー</label><br>
-	<label><input type="radio" name="menu4" value="カレー" required>カレー</label><br>
-	<label><input type="radio" name="menu4" value="コーンスープ" required>コーンスープ</label><br>
-	<label><input type="radio" name="menu4" value="コンソメスープ" required>コンソメスープ</label><br>
-	<label><input type="radio" name="menu4" value="other" required
-				onclick="connecttext('text_menu1',this.checked);">その他</label>：
-	<input type="text" name="othertext" id="text_menu1" value="">
-</div>
-
-<div class="content">
-	<p>デザート【必須】</p>
-	<label><input type="radio" name="menu5" value="プリン" required>プリン</label><br>
-	<label><input type="radio" name="menu5" value="ヨーグルト" required>ヨーグルト</label><br>
-	<label><input type="radio" name="menu5" value="ショートケーキ" required>ショートケーキ</label><br>
-	<label><input type="radio" name="menu5" value="シュークリーム" required>シュークリーム</label><br>
-	<label><input type="radio" name="menu5" value="りんご" required>りんご</label><br>
-	<label><input type="radio" name="menu5" value="みかん" required>みかん</label><br>
-	<label><input type="radio" name="menu5" value="コーヒーゼリー" required>コーヒーゼリー</label><br>
-	<label><input type="radio" name="menu5" value="other" required
-				onclick="connecttext('text_menu1',this.checked);">その他</label>：
-	<input type="text" name="othertext" id="text_menu1" value="">
-</div>
-
-	<div class="control">
-    <button type="submit"> 決定</button>
-	</div>
-</form>
+<header>
 
 
+
+<h1 id="logo"><a href="index.html"><img src="images/logo.png" alt="ヒエダの自己紹介ページ"></a></h1>
+
+<!--PC用（801px以上端末）メニュー-->
+<nav id="menubar">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+
+
+</ul>
+</nav>
+
+</header>
+
+<div id="contents">
+
+<section class="inner first">
+
+<h2>おすすめの本紹介</h2>
+<p><span class="color1">気分に合わせておすすめの本を紹介します</span><br>
+<p>どんな本を読みたいですか？</p>
+
+  <script>
+function CheckData() {
+    if (document.getElementById("number").value == "") {
+    alert('数字を入力して下さい（半角）');
+    return false;
+    }
+    else {
+    n = document.getElementById("number").value;
+    if (n == 1) {
+
+        document.getElementById("result").value = 'オスカー・ワイルド『サロメ』';
+    
+    }
+    else if(n == 2){
+        document.getElementById("result").value = 'エドワード・ゴーリー『弦のないハープ』';
+    }
+
+   else if(n == 3){
+        document.getElementById("result").value = '『新明解国語辞典』';
+    }
+    else if(n == 3){
+        document.getElementById("result").value = '高村幸太郎『智恵子抄』';
+    }
+    else{ document.getElementById("result").value = '親鸞『教行信証』';
+
+    } 
+    return true;
+    }
+}
+</script>
+</head>
+
+<body>
+    <h1>あなたへのおすすめは？</h1>
+    数字を入力して下さい（半角）<input type="text" id="number">
+<button type="button" onclick="CheckData()">CHECK！</button>
+<div>結果は…<input type="text" id="result" style="width:400px;">がおすすめです！</div>
 </body>
 
+</section>
+<div style="width: 500px; height: auto; display: block; margin: auto;">
+<a href = "about3.html"><img src="images/sinran.jpg"alt=""></a>
+</div>
 
+
+<footer>
+<small>Copyright&copy; <a href="index.html">ヒエダの自己紹介ページ</a> All Rights Reserved.</small>
+<span class="pr">《<a href="https://template-party.com/" target="_blank">Web Design:Template-Party</a>》</span>
+</footer>
+
+</div>
+<!--/#contents-->
+
+</div>
+<!--/#container-->
+
+<!--オープニングアニメーション-->
+<aside id="mainimg">
+<img src="images/1.png" alt="" class="photo photo1">
+<img src="images/1.png" alt="" class="photo photo2">
+<img src="images/1.png" alt="" class="photo photo3">
+<img src="images/1.png" alt="" class="photo photo4">
+<img src="images/1.png" alt="" class="photo photo5">
+<img src="images/1.png" alt="" class="photo photo6">
+<img src="images/1.png" alt="" class="photo photo7">
+<img src="images/1.png" alt="" class="photo photo8">
+<img src="images/1.png" alt="" class="photo photo9">
+</aside>
+
+<!--小さな端末用（800px以下端末）メニュー-->
+<nav id="menubar-s">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+
+</ul>
+</nav>
+
+<!--ページの上部に戻る「↑」ボタン-->
+<p class="nav-fix-pos-pagetop"><a href="#">↑</a></p>
+
+<!--メニュー開閉ボタン-->
+<div id="menubar_hdr" class="close"></div>
+
+<!--メニューの開閉処理条件設定　800px以下-->
+<script>
+if (OCwindowWidth() <= 800) {
+	open_close("menubar_hdr", "menubar-s");
+}
+</script>
+
+</body>
 </html>
-'''[1:-1].format(title=title_str))
+'''[1:-1].format(title=))

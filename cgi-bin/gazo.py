@@ -1,5 +1,5 @@
-menu1 = {'白米': 'shushoku1.jpeg', '玄米': 'genmai.png', 'たけのこご飯': 'takenoko.jpg', '赤飯': 'sekihan.jpg', 'サフランライス': 'sahuran.jpg', 'うどん': 'udon.jpg', 'そうめん': 'soumen.jpg', 'other':0, 'なし': 'nashi.jpg'}
-menu2 = {'鮭の塩焼き': 'sake.jpg', '豚の生姜焼き': 'syogayaki.jpeg', 'アジフライ': 'azihurai.jpg', 'ハンバーグ': 'hanbagu.jpeg', '餃子': 'gyoza.jpg', 'えび天': 'ebiten.jpg', '唐揚げ': 'karaage.jpg', 'other':0, 'なし': 'nashi.jpg' }
-menu3 = {'ほうれん草のおひたし': 'hourensou.jpeg', 'ひじきの煮物': 'hiziki.jpg', '肉じゃが': 'nikuzyaga.jpg', '茄子の揚げびたし': 'nasu.jpg', '冷ややっこ': 'hiyayakko.jpeg', '冷やしトマト': 'tomato.jpg', 'ポテトサラダ':'potesara.jpg', 'other':0, 'なし': 'nashi.jpg' }
-menu4 = {'味噌汁': 'shiru1.jpeg', 'わかめスープ': 'wakamesupu.jpg', 'ミネストローネ': 'minesutorone.jpg', 'ビーフシチュー': 'bihusityu.jpg', 'カレー': 'kare.jpg', 'コーンスープ': 'konsupu.jpg', 'コンソメスープ':'konsome.jpg', 'other':0, 'なし': 'nashi.jpg'}
-menu5 = {'プリン': 'purin.jpg', 'ヨーグルト': 'yoguruto.jpg', 'ショートケーキ': 'syotokeki.jpg', 'シュークリーム': 'syukurimu.jpg', 'りんご': 'ringo.jpeg', 'みかん': 'mikan.jpg', 'コーヒーゼリー': 'kohi.jpg', 'other':0, 'なし': 'nashi.jpg'}
+menu1 = {'白米': 'shushoku1.jpeg', '玄米': 'genmai.png', 'たけのこご飯': 'takenoko.jpg', '赤飯': 'sekihan.jpg', 'サフランライス': 'sahuran.jpg', 'うどん': 'udon.jpg', 'そうめん': 'soumen.jpg', 'other':0, 'なし': 'nasi.jpg'}
+menu2 = {'鮭の塩焼き': 'sake.jpg', '豚の生姜焼き': 'syogayaki.jpeg', 'アジフライ': 'azihurai.jpg', 'ハンバーグ': 'hanbagu.jpeg', '餃子': 'gyoza.jpg', 'えび天': 'ebiten.jpg', '唐揚げ': 'karaage.jpg', 'other':0, 'なし': 'nasi.jpg' }
+menu3 = {'ほうれん草のおひたし': 'hourensou.jpeg', 'ひじきの煮物': 'hiziki.jpg', '肉じゃが': 'nikuzyaga.jpg', '茄子の揚げびたし': 'nasu.jpg', '冷ややっこ': 'hiyayakko.jpeg', '冷やしトマト': 'tomato.jpg', 'ポテトサラダ':'potesara.jpg', 'other':0, 'なし': 'nasi.jpg' }
+menu4 = {'味噌汁': 'shiru1.jpeg', 'わかめスープ': 'wakamesupu.jpg', 'ミネストローネ': 'minesutorone.jpg', 'ビーフシチュー': 'bihusityu.jpg', 'カレー': 'kare.jpg', 'コーンスープ': 'konsupu.jpg', 'コンソメスープ':'konsome.jpg', 'other':0, 'なし': 'nasi.jpg'}
+menu5 = {'プリン': 'purin.jpg', 'ヨーグルト': 'yoguruto.jpg', 'ショートケーキ': 'syotokeki.jpg', 'シュークリーム': 'syukurimu.jpg', 'りんご': 'ringo.jpeg', 'みかん': 'mikan.jpg', 'コーヒーゼリー': 'kohi.jpg', 'other':0, 'なし': 'nasi.jpg'}
